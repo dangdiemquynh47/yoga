@@ -17,22 +17,23 @@ const Experts = () => {
             return (
               <div className="text-center relative" key={item.img}>
                 <div className="group">
-                  <div className="">
-                    <img
-                      src={"images/" + item.img}
-                      alt=""
-                      className={
-                        "w-full object-cover opacity-1 group-hover:opacity-0 duration-300 " +
-                        (index % 2 !== 0 ? "h-[330px]" : "h-[400px]")
-                      }
-                    />
-                  </div>
-                  <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-1 text-black">
-                    <p> sjhfb</p>
+                  <img
+                    src={"images/" + item.img}
+                    alt=""
+                    className={
+                      "w-full object-cover opacity-100 group-hover:opacity-0 duration-300 " +
+                      (index % 2 !== 0 ? "h-[330px]" : "h-[400px]")
+                    }
+                  />
+                  <div className={"px-10  absolute top-0 left-0 opacity-0 group-hover:opacity-100 text-black bg-rose-50/50 " +
+                      (index % 2 !== 0 ? "h-[330px] pt-[104px]" : "h-[400px] pt-[184px]")}>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
                   </div>
                 </div>
                 <p className="text-3xl pt-8">{item.name}</p>
-                <p className="text-lg italic text-indigo-500 pb-20">{item.des}</p>
+                <p className="text-lg italic text-indigo-500 pb-20">
+                  {item.des}
+                </p>
               </div>
             );
           })}

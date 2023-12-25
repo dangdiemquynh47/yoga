@@ -6,7 +6,7 @@ const HelpConfident = () => {
     "Quis nostrud exercitation ullamco laboris nisi",
   ];
   return (
-    <div className="w-full px-10 md:px-[160px] md:p-[110px] pt-[110px] bg-rose-50/50 relative">
+    <div className="w-full px-10 md:px-20  md:p-[110px] pt-[110px] bg-rose-50/50 relative">
       <p className="w-fit text-3xl pb-10">
         Hi! My name is <span className="italic text-indigo-500">Alisia</span>{" "}
         and I’m here to help <br /> you find the confidence you need to feel <br />{" "}
@@ -31,7 +31,7 @@ const HelpConfident = () => {
       <img
         src="/images/helpconfident.jpg"
         alt=""
-        className="relative md:translate-y-0 translate-y-[25%] md:absolute md:top-[110px] md:right-40"
+        className="relative md:translate-y-0 translate-y-[25%] md:absolute md:top-[110px] md:right-20"
       />
     </div>
   );
