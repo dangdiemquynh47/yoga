@@ -46,7 +46,7 @@ const WatchList = () => {
         >
           {swiper.map((item: any) => {
             return (
-              <SwiperSlide key={item.img + "hello"} className="pr-10">
+              <SwiperSlide key={item.img + "hello"} className="">
                 <img
                   src={"/images/" + item.img}
                   alt=""
