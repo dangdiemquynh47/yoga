@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="flex md:flex-row flex-col items-center justify-center sm:translate-y-[50%] ">
         {img.map((item: any) => {
           return (
-            <div className="">
+            <div className="" key={item}>
               <img src={"/images/" + item} alt="" className="w-[216px]" />
             </div>
           );
