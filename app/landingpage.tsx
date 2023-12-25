@@ -25,7 +25,7 @@ const LandingPage = () => {
         <HelpConfident />
       </div>
       <div className="py-40">
-        <Paratice />
+        {/* <Paratice /> */}
       </div>
       <div className="">
         <Video/>
@@ -33,7 +33,7 @@ const LandingPage = () => {
       <div className="mt-40">
         <Experts />
       </div>
-      <div className="mt-40">
+      <div className="mt-20">
         <YogaLifeStyle />
       </div>
       <div className="py-40">

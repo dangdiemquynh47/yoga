@@ -11,7 +11,7 @@ const Footer = () => {
   ];
   return (
     <div className="w-full">
-      <div className="flex sm:flex-row flex-col items-center justify-center sm:translate-y-[50%] ">
+      <div className="flex md:flex-row flex-col items-center justify-center sm:translate-y-[50%] ">
         {img.map((item: any) => {
           return (
             <div className="">
@@ -20,38 +20,40 @@ const Footer = () => {
           );
         })}
       </div>
-      <div className="bg-rose-50/90 sm:px-[250px] pb-[120px] pt-[240px] w-full">
+      <div className="bg-rose-50/50 sm:px-[250px] pb-[120px] pt-[240px] w-full">
         <div className="items-center flex justify-center pb-10">
           <img src="/images/Logo-img1.png" alt="" className="w-20 h-20" />
         </div>
-        <div className="flex justify-between items-center">
-          <div className="text-center items-center flex flex-col gap-4 text-sm">
-            <p>HOME</p>
-            <p>ABOUT ME</p>
-            <p>CONTACT</p>
+        <div className="flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center">
+          <div className="md:order-first order-1 flex flex-row md:flex-col text-center items-center md:gap-4 gap-10 text-[12px]">
+            <p className="hover:text-orange-500 cursor-pointer">HOME</p>
+            <p className="hover:text-orange-500 cursor-pointer">ABOUT ME</p>
+            <p className="hover:text-orange-500 cursor-pointer">CONTACT</p>
           </div>
-          <div className="items-center flex flex-col gap-8">
-            <p className="text-3xl">Subsrcibe to our newsletter</p>
-            <div className="flex">
+          <div className="items-center flex flex-col gap-8 ">
+            <p className="md:text-3xl text-2xl">Subsrcibe to our newsletter</p>
+            <div className="flex md:flex-row flex-col">
               <input
                 type="text"
                 placeholder="Email"
-                className=" px-5 py-3 outline-none w-[400px]"
+                className=" px-5 py-3 outline-none md:w-[400px] w-[320px]"
               />
-              <div className="bg-amber-50/90 text-amber-500 px-10 pt-3">
-                SEND
+              <div className="md:w-fit w-[200px] md:mt-0 mt-4 h-12 mx-auto bg-orange-100 text-orange-500 flex gap-4 items-center justify-center group overflow-hidden ">
+                <div className="h-[1px] w-6 bg-orange-500 group-hover:-translate-x-[50%] duration-300"></div>
+                <p className="text-[10px]">SEND</p>
+                <div className="h-[1px] w-6 bg-orange-500 group-hover:translate-x-[50%] duration-300"></div>
               </div>
             </div>
             <div className="flex gap-6">
-              <FacebookIcon />
-              <InstagramIcon />
-              <YoutubeIcon />
+              <FacebookIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
+              <InstagramIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
+              <YoutubeIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
             </div>
           </div>
-          <div className="text-center items-center flex flex-col gap-4 text-sm">
-            <p>CLASSES</p>
-            <p>BLOG</p>
-            <p>LANDING</p>
+          <div className="text-center items-center flex flex-row md:flex-col md:gap-4 gap-10 text-[12px]">
+            <p className="hover:text-orange-500 cursor-pointer">CLASSES</p>
+            <p className="hover:text-orange-500 cursor-pointer">BLOG</p>
+            <p className="hover:text-orange-500 cursor-pointer">LANDING</p>
           </div>
         </div>
       </div>

@@ -40,19 +40,19 @@ const YogaLifeStyle = () => {
     },
   ];
   return (
-    <div className="sm:p-40 p-8 bg-rose-50/50 w-full">
+    <div className="md:p-40 pt-20 pb-60 px-8 bg-rose-50/50 w-full">
       <p className="text-center text-4xl">
         Explore the{" "}
-        <span className="italic text-indigo-500">yoga lifestyle</span> and learn
-        more <br /> about our community
+        <span className="italic text-indigo-500">yoga <br className="md:hidden block"/> lifestyle</span> and learn <br className="md:hidden block"/>
+        more <br className="hidden md:block"/> about our <br className="md:hidden block"/> community
       </p>
-      <div className="grid sm:grid-cols-3 grid-cols-1 gap-16 pt-20">
+      <div className="grid sm:grid-cols-3 grid-cols-1 md:gap-16 gap-20">
         {lifestyle.map((item: any, index: number) => {
           return (
             <div
               className={
                 "w-full flex flex-col items-center justify-center " +
-                (index === 1 || index == 4 ? "mt-24" : "")
+                (index === 1 || index == 4 ? "md:mt-24" : "")
               }
               key={item.img}
             >

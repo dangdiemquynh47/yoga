@@ -29,9 +29,3 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
-
-svg:hover {
-  stroke:#4054B2;
-  stroke-width: 0.5px;
-  transition-duration: 800ms;
-}

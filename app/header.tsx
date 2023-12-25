@@ -15,13 +15,13 @@ const Header = () => {
 
   const menu = ["HOME", "PAGES", "CLASSES", "logo", "BLOG", "SHOP", "LANDING"];
   return (
-    <div className="w-full h-[103px] px-[82px] bg-rose-50/50 flex items-center justify-between">
-      <div className="flex gap-4 items-center justify-center">
-        <FacebookIcon />
-        <InstagramIcon />
-        <YoutubeIcon />
+    <div className="w-full md:h-[103px] h-fit py-2.5 md:px-[82px] px-4 bg-rose-50/50 flex items-center justify-between">
+      <div className="md:flex hidden gap-4 items-center justify-center">
+        <FacebookIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer '/>
+        <InstagramIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
+        <YoutubeIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
       </div>
-      <div className="flex gap-5 items-center justify-center">
+      <div className="md:flex hidden gap-5 items-center justify-center">
         {menu.map((item: any) => {
           return (
             <div
@@ -46,10 +46,14 @@ const Header = () => {
         })}
       </div>
 
+      <div className="md:hidden block">
+        <img src="images/Logo-img1.png" alt=""  className="w-[50px] h-[50px]"/>
+      </div>
+
       <div className="flex gap-4 items-center justify-center">
-        <SearchIcon />
-        <CartIcon />
-        <MenuIcon />
+        <SearchIcon className='md:block hidden md:hover:stroke-orange-500 stroke-black duration-300 cursor-pointer'/>
+        <CartIcon className='md:block hidden md:hover:stroke-orange-500 stroke-black duration-300 cursor-pointer'/>
+        <MenuIcon className='md:hover:fill-orange-500  fill-black duration-300 cursor-pointer'/>
       </div>
     </div>
   );
