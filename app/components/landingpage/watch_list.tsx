@@ -17,8 +17,8 @@ const WatchList = () => {
           modules={[Autoplay]}
           breakpoints={{
             0: {
-              spaceBetween: 10,
-              slidesPerView: 1,
+              spaceBetween: 50,
+              slidesPerView: 2,
               autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
@@ -27,7 +27,7 @@ const WatchList = () => {
 
             768: {
               slidesPerView: 2,
-              spaceBetween: 0,
+              spaceBetween: 50,
               autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
@@ -37,6 +37,7 @@ const WatchList = () => {
           // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
           loop={true}
+          spaceBetween = {50}
           slidesPerView={2}
           autoplay={{
             delay: 3000,
@@ -45,11 +46,11 @@ const WatchList = () => {
         >
           {swiper.map((item: any) => {
             return (
-              <SwiperSlide key={item.img + "hello"} className="">
+              <SwiperSlide key={item.img + "hello"} className="pr-10">
                 <img
                   src={"/images/" + item.img}
                   alt=""
-                  className="md:h-[80vh] md:w-[970px]"
+                  className="md:h-[80vh] md:w-full"
                 />
                 <div className="flex flex-col gap-6 absolute md:text-7xl text-4xl text-white md:bottom-10 md:left-10 bottom-6 left-6 ">
                   <p>{item.text}</p>
