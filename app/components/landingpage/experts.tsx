@@ -91,12 +91,12 @@ const Item = ({ item, index }: any) => {
           alt=""
           className={
             "w-full object-cover opacity-100 group-hover:opacity-0 duration-300 " +
-            (index % 2 !== 0 ? "h-[330px]" : "h-[400px]")
+            (index % 2 !== 0 ? "h-[330px] 2xl:h-[500px]" : "h-[400px] 2xl:h-[580px]")
           }
         />
         <div className={
             "w-full px-10  absolute top-0 left-0 opacity-0 group-hover:opacity-100 text-black bg-[url('/images/bg.jpg')] " +
-            (index % 2 !== 0 ? "h-[330px]" : "h-[400px]")
+            (index % 2 !== 0 ? "h-[330px] 2xl:h-[500px]" : "h-[400px] 2xl:h-[580px]")
           }
         >
           <div className="">
@@ -114,12 +114,12 @@ const Item = ({ item, index }: any) => {
                   // fill: { duration: 0.2, ease: [1, 0, 0.8, 1] },
                   duration: 0.4,
                 }}
-                className={"mx-auto w-[1px] bg-[#FF782B]" + (index % 2 !== 0 ? " h-[100px] " : " h-[160px] ")}
+                className={"mx-auto w-[1px] bg-[#FF782B] " + (index % 2 !== 0 ? "2xl:h-[200px] h-[100px] " : "2xl:h-[260px] h-[160px] ")}
               ></motion.div>
             </div>
 
             <StarIcon
-              className="mx-auto stroke-[#FF782B] mb-10" 
+              className="mx-auto stroke-[#FF782B] 2xl:mb-16 mb-10" 
               variants={icon}
               delay={0.2}
               animate={animate === false ? "hidden" : "visible"}
