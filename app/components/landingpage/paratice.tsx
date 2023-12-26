@@ -128,8 +128,8 @@ const Paratice = () => {
         />
       </div>
       <p className="text-center text-3xl">
-        A personal <span className="italic text-indigo-500">practice</span>{" "}
-        that’s right for you. Try all <br /> the classes we have available
+        A personal <span className="italic text-indigo-500">practice</span>{" "}<br className="block md:hidden"/>
+        that’s right for you.<br className="block md:hidden"/> Try all <br className="md:block hidden"/> the classes<br className="block md:hidden"/> we have available
       </p>
       <div className="grid sm:grid-cols-4 grid-cols-2 px-12 justify-center items-center sm:px-[400px] gap-6 mt-20">
         {choice.map((item: any, index: number) => {
@@ -149,7 +149,7 @@ const Paratice = () => {
           );
         })}
       </div>
-      <div className="mt-10 items-center justify-center flex">
+      <div className="mt-10 items-center justify-center md:flex hidden">
         <table className="border-collapse border border-[#fff1e9] border-[3px] ">
           <thead>
             <tr>
@@ -214,3 +214,50 @@ const Paratice = () => {
 };
 
 export default Paratice;
+
+// const MobileTable = () => {
+//   const table = [{
+//     day:"Monday", 
+//     nameYoga1: "Power Yoga ",
+//     time1:""
+//     nameYoga1: "Power Yoga ",
+//     time1:""
+//     nameYoga1: "Power Yoga ",
+//     time1:""
+//   },
+//   {
+//     day:"", 
+//     nameYoga: "",
+//     time:""
+//   },
+//   {
+//     day:"", 
+//     nameYoga: "",
+//     time:""
+//   },
+//   {
+//     day:"", 
+//     nameYoga: "",
+//     time:""
+//   },
+//   {
+//     day:"", 
+//     nameYoga: "",
+//     time:""
+//   },
+//   {
+//     day:"", 
+//     nameYoga: "",
+//     time:""
+//   },
+//   {
+//     day:"", 
+//     nameYoga: "",
+//     time:""
+//   },]
+//   return (
+//     <div className="">
+
+//     </div>
+//   )
+// }

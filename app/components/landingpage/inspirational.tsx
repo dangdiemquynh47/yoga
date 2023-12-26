@@ -36,6 +36,26 @@ const Inspirational = () => {
       job: "Tenis player",
       des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
     },
+    {
+      avt: "avt-1.png",
+      name: "Maria Peters",
+      job: "Actress",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
+    },
+    {
+      avt: "avt-2.png",
+      name: "Sofia Ferrari",
+      job: "Athlete",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
+    },
+    {
+      avt: "avt-3.png",
+      name: "Jack Davids",
+      job: "Tenis player",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
+    }
+    
+
   ];
   return (
     <div className="">
@@ -66,13 +86,13 @@ const Inspirational = () => {
         <span className="italic text-indigo-500">inspirational</span> words from
         our <br /> very best clients
       </p>
-      <div className="px-40 pt-16">
+      <div className="md:px-40 px-8 pt-16">
         <Swiper
           modules={[Autoplay]}
           breakpoints={{
             0: {
               spaceBetween: 80,
-              slidesPerView: 3,
+              slidesPerView: 1,
               autoplay: {
                 delay: 2000,
                 disableOnInteraction: false,

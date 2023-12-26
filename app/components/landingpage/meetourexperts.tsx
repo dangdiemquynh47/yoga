@@ -56,13 +56,13 @@ const MeetOurExperts = () => {
         })}
       </div> */}
 
-      <div className="translate-y-[20%] mx-8">
+      <div className="translate-y-[20%] md:mx-8">
         <Swiper
           modules={[Autoplay]}
           breakpoints={{
             0: {
               spaceBetween: 30,
-              slidesPerView: 3,
+              slidesPerView: 1,
               autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
@@ -81,7 +81,7 @@ const MeetOurExperts = () => {
           // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
           loop={true}
-          slidesPerView={3}
+          slidesPerView={1}
           spaceBetween={50}
           autoplay={{
             delay: 3000,
