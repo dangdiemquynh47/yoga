@@ -16,35 +16,36 @@ import Video from "./components/landingpage/video";
 import { motion } from "framer-motion";
 
 const LandingPage = () => {
- 
   return (
     <div className="w-full">
       <div className="">
         <WatchList />
       </div>
-      <div className="">
+      <div className="pb-10">
         <YogaPoses />
       </div>
       <div className="mt-20">
         <HelpConfident />
       </div>
-      <div className="py-40">{/* <Paratice /> */}</div>
+      <div className="mt-40">
+        <Paratice />
+      </div>
       <div className="">
         <Video />
       </div>
-      <div className="mt-40">
+      <div className="pt-10">
         <Experts />
       </div>
       <div className="mt-20">
         <YogaLifeStyle />
       </div>
-      <div className="py-40">
+      <div className="-translate-y-[10%] pb-40">
         <Inspirational />
       </div>
       <div className="">
         <MeetOurExperts />
       </div>
-      <div className="py-40">
+      <div className="pt-60 ">
         <MapStudio />
       </div>
     </div>

@@ -1,4 +1,8 @@
+"use client";
 import dayjs from "dayjs";
+import { StarIcon } from "../svg";
+import React from "react";
+import { motion } from "framer-motion";
 
 const YogaLifeStyle = () => {
   const lifestyle = [
@@ -39,8 +43,41 @@ const YogaLifeStyle = () => {
       des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae feugiat magna, ut mattis ligula. Aliquam ut rutrum est. Maecenas sit amet",
     },
   ];
+
+  const icon = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+    },
+  };
   return (
-    <div className="md:p-40 pt-20 pb-60 px-8 bg-rose-50/50 w-full">
+    <div className="md:p-40 pt-20 pb-60 px-8 bg-rose-50/50 w-full relative">
+       <div className="pb-10 absolute top-0 left-[50%] -translate-y-[25%]">
+        <div className="overflow-hidden ">
+          <motion.div
+            // initial=" hidden"
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              // default: { duration: 0.2, ease: "anticipate" },
+              // fill: { duration: 0.2, ease: [1, 0, 0.8, 1] },
+              duration: 0.4,
+            }}
+            className="mx-auto w-[1px] bg-[#FF782B] h-[150px] "
+          ></motion.div>
+        </div>
+
+        <StarIcon
+          className="mx-auto stroke-[#FF782B]"
+          variants={icon}
+          delay={0.2}
+          animate="visible"
+        />
+      </div>
       <p className="text-center text-4xl">
         Explore the{" "}
         <span className="italic text-indigo-500">yoga <br className="md:hidden block"/> lifestyle</span> and learn <br className="md:hidden block"/>
@@ -56,9 +93,9 @@ const YogaLifeStyle = () => {
               }
               key={item.img}
             >
-              <p className="w-fit px-5 text-orange-500 translate-y-[50%] py-1 bg-white">{dayjs("2019-01-25").format("MMMM DD, YYYY")}</p>
-              <div className="duration-150  hover:ease-in cursor-pointer">
-                <img src={"/images/" + item.bigimg} alt="" className="ease-out duration-300" />
+              <p className="w-fit px-5 text-orange-500 translate-y-[50%] z-10 py-1 bg-white">{dayjs("2019-01-25").format("MMMM DD, YYYY")}</p>
+              <div className="duration-150  hover:ease-in cursor-pointer overflow-hidden">
+                <img src={"/images/" + item.bigimg} alt="" className="duration-300 scale-105 hover:scale-100" />
               </div>
               <div className="pt-10 flex flex-col items-center justify-center">
                 <img src={"/images/" + item.smallimg} alt="" className="" />

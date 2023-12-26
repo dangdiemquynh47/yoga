@@ -2,7 +2,6 @@
 import { StarIcon } from "../svg";
 import React from "react";
 import { motion } from "framer-motion";
-import StarAnimate from "./staricon";
 
 const Experts = () => {
   const experts = [
@@ -26,6 +25,28 @@ const Experts = () => {
   return (
     <div className="w-full">
       <div className="md:px-14 px-8">
+      <div className="pb-10 ">
+        <div className="overflow-hidden ">
+          <motion.div
+            // initial=" hidden"
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              // default: { duration: 0.2, ease: "anticipate" },
+              // fill: { duration: 0.2, ease: [1, 0, 0.8, 1] },
+              duration: 0.4,
+            }}
+            className="mx-auto w-[1px] bg-[#FF782B] h-[150px] "
+          ></motion.div>
+        </div>
+
+        <StarIcon
+          className="mx-auto stroke-[#FF782B]"
+          variants={icon}
+          delay={0.2}
+          animate="visible"
+        />
+      </div>
         <p className="text-center text-3xl">
           Meet the <span className="italic text-indigo-500">experts</span> that
           will guide you on your <br /> way to better everyday life
@@ -73,38 +94,41 @@ const Item = ({ item, index }: any) => {
             (index % 2 !== 0 ? "h-[330px]" : "h-[400px]")
           }
         />
-        <div
-          className={
-            "w-full px-10  absolute top-0 left-0 opacity-100 group-hover:opacity-100 text-black bg-rose-50/50 " +
+        <div className={
+            "w-full px-10  absolute top-0 left-0 opacity-0 group-hover:opacity-100 text-black bg-rose-50/50 " +
             (index % 2 !== 0 ? "h-[330px]" : "h-[400px]")
           }
         >
           <div className="">
             <div className="overflow-hidden">
               <motion.div
-                  // initial=" hidden"
-                animate={animate === false ? { y: -100, opacity: 0 } : { y: 0, opacity: 1 }}
+                // initial=" hidden"
+                animate={
+                  animate === false
+                    ? { y: -100, opacity: 0 }
+                    : { y: 0, opacity: 1 }
+                }
                 transition={{
                   ease: "easeInOut",
                   // default: { duration: 0.2, ease: "anticipate" },
                   // fill: { duration: 0.2, ease: [1, 0, 0.8, 1] },
-                  duration: 0.4
+                  duration: 0.4,
                 }}
-                className="mx-auto w-[1px] bg-[#FF782B] h-[100px]"
+                className={"mx-auto w-[1px] bg-[#FF782B]" + (index % 2 !== 0 ? " h-[100px] " : " h-[160px] ")}
               ></motion.div>
             </div>
 
             <StarIcon
-              className="mx-auto mb-16 stroke-[#FF782B]"
+              className="mx-auto stroke-[#FF782B] mb-10" 
               variants={icon}
               delay={0.2}
               animate={animate === false ? "hidden" : "visible"}
             />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et
+            </p>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et
-          </p>
         </div>
       </div>
       <p className="text-3xl pt-8">{item.name}</p>

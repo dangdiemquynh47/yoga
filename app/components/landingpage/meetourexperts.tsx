@@ -2,11 +2,46 @@
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { StarIcon } from "../svg";
+import React from "react";
+import { motion } from "framer-motion";
 
 const MeetOurExperts = () => {
   const img = ["yoga-1.jpg", "yoga-2.jpg", "yoga-3.jpg", "yoga-4.jpg"];
+  const icon = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+    },
+  };
   return (
-    <div className="pt-40 bg-rose-50/50 w-full px-8 ">
+    <div className=" bg-rose-50/50 w-full px-8 ">
+       <div className=" -translate-y-[30%]">
+        <div className="overflow-hidden ">
+          <motion.div
+            // initial=" hidden"
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              // default: { duration: 0.2, ease: "anticipate" },
+              // fill: { duration: 0.2, ease: [1, 0, 0.8, 1] },
+              duration: 0.4,
+            }}
+            className="mx-auto w-[1px] bg-[#FF782B] h-[150px] "
+          ></motion.div>
+        </div>
+
+        <StarIcon
+          className="mx-auto stroke-[#FF782B]"
+          variants={icon}
+          delay={0.2}
+          animate="visible"
+        />
+      </div>
       <p className="text-center text-4xl">
         Come on down to our studio and meet <br /> our yoga{" "}
         <span className="italic text-indigo-500">experts</span>

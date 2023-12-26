@@ -2,8 +2,21 @@
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { StarIcon } from "../svg";
+import React from "react";
+import { motion } from "framer-motion";
 
 const Inspirational = () => {
+  const icon = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+    },
+  };
   const info = [
     {
       avt: "avt-1.png",
@@ -26,6 +39,28 @@ const Inspirational = () => {
   ];
   return (
     <div className="">
+        <div className="pb-10 ">
+        <div className="overflow-hidden ">
+          <motion.div
+            // initial=" hidden"
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              // default: { duration: 0.2, ease: "anticipate" },
+              // fill: { duration: 0.2, ease: [1, 0, 0.8, 1] },
+              duration: 0.4,
+            }}
+            className="mx-auto w-[1px] bg-[#FF782B] h-[150px] "
+          ></motion.div>
+        </div>
+
+        <StarIcon
+          className="mx-auto stroke-[#FF782B]"
+          variants={icon}
+          delay={0.2}
+          animate="visible"
+        />
+      </div>
       <p className="text-4xl text-center">
         Beautiful and{" "}
         <span className="italic text-indigo-500">inspirational</span> words from
@@ -57,7 +92,7 @@ const Inspirational = () => {
           // onSwiper={(swiper) => console.log(swiper)}
           loop={true}
           slidesPerView={3}
-          spaceBetween={50}
+          spaceBetween={80}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
@@ -65,7 +100,7 @@ const Inspirational = () => {
         >
           {info.map((item: any) => {
             return (
-              <SwiperSlide key={item.des} className="">
+              <SwiperSlide key={item.des + "skfhbjh"} className="">
                   <div className="flex gap-4">
                     <img
                       src={"/images/" + item.avt}
