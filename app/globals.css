@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=Merriweather:ital,wght@1,300&family=Playfair+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Source+Code+Pro&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -21,28 +18,63 @@
 }
 
 body {
-  font-family: 'Be Vietnam Pro', sans-serif;  /* color: rgb(var(--foreground-rgb));
+  /* font-family: 'Be Vietnam Pro', sans-serif;  */
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+  /* font-family: "Be Vietnam Pro", sans-serif !important; */
+  /* font-family: "Dancing Script", cursive !important; */
+}
+
+.text-title {
+  font-family: "Cormorant Garamond", serif !important;
+}
+
+.text-content {
+  font-family: "Source Code Pro", monospace !important;
 }
 
 .star {
   fill: none;
-    stroke-width: 1px;
-    transition-duration: 3000;
-    stroke-dasharray: 1353px;
-    stroke-dashoffset: 0;
-    animation: move 10s linear infinite; 
-    animation-fill-mode: forwards;
-    
+  stroke-width: 1px;
+  transition-duration: 3000;
+  stroke-dasharray: 1353px;
+  stroke-dashoffset: 0;
+  animation: move 10s linear infinite;
+  animation-fill-mode: forwards;
 }
 
 @keyframes move {
   100% {
-      stroke-dashoffset: 100%;
+    stroke-dashoffset: 100%;
   }
+}
+
+.border-primary {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ff782b;
+}
+
+.border-secondary {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffdac5;
+}
+
+.bg-primary {
+  background-color: #ff782b;
+}
+
+
+.text-primary {
+  color: #ff782b;
+}
+
+.bg-button {
+  background-color: #ffe8db;
 }

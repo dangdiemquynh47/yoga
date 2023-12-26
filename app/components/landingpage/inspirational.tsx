@@ -81,7 +81,7 @@ const Inspirational = () => {
           animate="visible"
         />
       </div>
-      <p className="text-4xl text-center">
+      <p className="text-4xl text-center text-title">
         Beautiful and{" "}
         <span className="italic text-indigo-500">inspirational</span> words from
         our <br /> very best clients
@@ -128,8 +128,8 @@ const Inspirational = () => {
                       className="h-20 w-20"
                     />
                     <div className="">
-                      <p className="text-3xl">{item.name}</p>
-                      <p className="text-lg text-indigo-500">{item.job}</p>
+                      <p className="text-3xl text-title">{item.name}</p>
+                      <p className="text-lg text-indigo-500 text-title">{item.job}</p>
                     </div>
                   </div>
                   <p className="pt-4 text-neutral-600">{item.des}</p>

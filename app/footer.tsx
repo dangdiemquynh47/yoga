@@ -20,7 +20,7 @@ const Footer = () => {
           );
         })}
       </div>
-      <div className="bg-rose-50/50 sm:px-[250px] pb-[120px] pt-[240px] w-full">
+      <div className="bg-[url('/images/bg.jpg')] sm:px-[250px] pb-[120px] pt-[240px] w-full">
         <div className="items-center flex justify-center pb-10">
           <img src="/images/Logo-img1.png" alt="" className="w-20 h-20" />
         </div>
@@ -31,23 +31,23 @@ const Footer = () => {
             <p className="hover:text-orange-500 cursor-pointer">CONTACT</p>
           </div>
           <div className="items-center flex flex-col gap-8 ">
-            <p className="md:text-3xl text-2xl">Subsrcibe to our newsletter</p>
+            <p className="md:text-3xl text-2xl text-title">Subsrcibe to our newsletter</p>
             <div className="flex md:flex-row flex-col">
               <input
                 type="text"
                 placeholder="Email"
-                className=" px-5 py-3 outline-none md:w-[400px] w-[320px]"
+                className=" px-5 py-2 outline-none md:w-[400px] w-[320px]"
               />
-              <div className="md:w-fit w-[200px] md:mt-0 mt-4 h-12 mx-auto bg-orange-100 text-orange-500 flex gap-4 items-center justify-center group overflow-hidden ">
-                <div className="h-[1px] w-6 bg-orange-500 group-hover:-translate-x-[50%] duration-300"></div>
-                <p className="text-[10px]">SEND</p>
-                <div className="h-[1px] w-6 bg-orange-500 group-hover:translate-x-[50%] duration-300"></div>
+              <div className="md:w-fit w-[200px] md:mt-0 mt-4 h-10 mx-auto bg-button flex gap-4 items-center justify-center group overflow-hidden ">
+                <div className="h-[1px] w-6 bg-primary group-hover:-translate-x-[50%] duration-300"></div>
+                <p className="text-[12px] px-5 text-primary">SEND</p>
+                <div className="h-[1px] w-6 bg-primary group-hover:translate-x-[50%] duration-300"></div>
               </div>
             </div>
-            <div className="flex gap-6">
+            <div className="flex gap-6 items-center">
               <FacebookIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
-              <InstagramIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
-              <YoutubeIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
+              <InstagramIcon className='md:hover:stroke-orange-500 duration-300 cursor-pointer'/>
+              <YoutubeIcon className='md:hover:stroke-orange-500 duration-300 cursor-pointer'/>
             </div>
           </div>
           <div className="text-center items-center flex flex-row md:flex-col md:gap-4 gap-10 text-[12px]">

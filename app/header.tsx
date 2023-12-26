@@ -15,11 +15,11 @@ const Header = () => {
 
   const menu = ["HOME", "PAGES", "CLASSES", "logo", "BLOG", "SHOP", "LANDING"];
   return (
-    <div className="w-full md:h-[103px] h-fit py-2.5 md:px-[82px] px-4 bg-rose-50/50 flex items-center justify-between">
+    <div className="w-full md:h-[103px] h-fit py-2.5 md:px-[82px] px-4 bg-[url('/images/bg.jpg')] flex items-center justify-between">
       <div className="md:flex hidden gap-4 items-center justify-center">
         <FacebookIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer '/>
-        <InstagramIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
-        <YoutubeIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
+        <InstagramIcon className='md:hover:stroke-orange-500 duration-300 cursor-pointer'/>
+        <YoutubeIcon className='md:hover:stroke-orange-500 duration-300 cursor-pointer'/>
       </div>
       <div className="md:flex hidden gap-5 items-center justify-center">
         {menu.map((item: any) => {
@@ -27,7 +27,7 @@ const Header = () => {
             <div
               key={item}
               className={
-                "cursor-pointer hover:text-amber-500 duration-300 " +
+                "cursor-pointer hover:text-amber-500 duration-300 text-title " +
                 (item === header ? "text-amber-500" : "")
               }
               onClick={() => setHeader(item)}

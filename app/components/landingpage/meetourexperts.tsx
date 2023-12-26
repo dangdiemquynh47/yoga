@@ -19,7 +19,7 @@ const MeetOurExperts = () => {
     },
   };
   return (
-    <div className=" bg-rose-50/50 w-full px-8 ">
+    <div className=" bg-[url('/images/bg.jpg')] w-full px-8 ">
        <div className=" -translate-y-[30%]">
         <div className="overflow-hidden ">
           <motion.div
@@ -42,7 +42,7 @@ const MeetOurExperts = () => {
           animate="visible"
         />
       </div>
-      <p className="text-center text-4xl">
+      <p className="text-center text-4xl text-title">
         Come on down to our studio and meet <br /> our yoga{" "}
         <span className="italic text-indigo-500">experts</span>
       </p>

@@ -39,11 +39,11 @@ const YogaPoses = () => {
           animate="visible"
         />
       </div>
-      <p className="text-3xl">
+      <p className="text-4xl text-title">
         A joyfull <span className="italic text-indigo-500">investment</span> in
         your body, <br /> mind and spirit
       </p>
-      <div className="group flex flex-col sm:flex-row md:gap-20 gap-10 items-center justify-center mt-12 text-xl">
+      <div className="group flex flex-col sm:flex-row md:gap-20 gap-10 items-center justify-center mt-12 text-2xl text-title">
         <div className="">
           <PowerYogaIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer" />
           <p className="md:mt-6 mt-3">Power Yoga</p>

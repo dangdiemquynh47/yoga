@@ -12,7 +12,7 @@ const WatchList = () => {
   ];
   return (
     <div className="max-w-screen overflow-hidden">
-      <div className="md:w-[150%] w-[220%] bg-rose-50/50 md:pl-20 pb-40">
+      <div className="md:w-[150%] w-[220%] bg-[url('/images/bg.jpg')] md:pl-20 pb-40">
         <Swiper
           modules={[Autoplay]}
           breakpoints={{
@@ -53,7 +53,7 @@ const WatchList = () => {
                   className="md:h-[80vh] md:w-full"
                 />
                 <div className="flex flex-col gap-6 absolute md:text-7xl text-4xl text-white md:bottom-10 md:left-10 bottom-6 left-6 ">
-                  <p>{item.text}</p>
+                  <p className="text-title">{item.text}</p>
                   <div className="group flex items-center justify-center gap-2 md:py-4 py-1 h-fit bg-rose-100 w-fit overflow-hidden">
                     <div className="h-[1px] w-6 group-hover:-translate-x-[14px] duration-300 bg-orange-500"></div>
                     <button className="text-orange-500 text-[12px]">

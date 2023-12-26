@@ -127,7 +127,7 @@ const Paratice = () => {
           animate="visible"
         />
       </div>
-      <p className="text-center text-3xl">
+      <p className="text-center text-4xl text-title">
         A personal <span className="italic text-indigo-500">practice</span>{" "}<br className="block md:hidden"/>
         that’s right for you.<br className="block md:hidden"/> Try all <br className="md:block hidden"/> the classes<br className="block md:hidden"/> we have available
       </p>

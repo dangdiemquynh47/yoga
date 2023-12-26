@@ -47,7 +47,7 @@ const Experts = () => {
           animate="visible"
         />
       </div>
-        <p className="text-center text-3xl">
+        <p className="text-center text-4xl text-title">
           Meet the <span className="italic text-indigo-500">experts</span> that
           will guide you on your <br /> way to better everyday life
         </p>
@@ -85,7 +85,7 @@ const Item = ({ item, index }: any) => {
       onMouseEnter={() => setAnimate(true)}
       onMouseLeave={() => setAnimate(false)}
     >
-      <div className="group">
+      <div className="group ">
         <img
           src={"images/" + item.img}
           alt=""
@@ -95,7 +95,7 @@ const Item = ({ item, index }: any) => {
           }
         />
         <div className={
-            "w-full px-10  absolute top-0 left-0 opacity-0 group-hover:opacity-100 text-black bg-rose-50/50 " +
+            "w-full px-10  absolute top-0 left-0 opacity-0 group-hover:opacity-100 text-black bg-[url('/images/bg.jpg')] " +
             (index % 2 !== 0 ? "h-[330px]" : "h-[400px]")
           }
         >
@@ -131,8 +131,8 @@ const Item = ({ item, index }: any) => {
           </div>
         </div>
       </div>
-      <p className="text-3xl pt-8">{item.name}</p>
-      <p className="text-lg italic text-indigo-500 pb-20">{item.des}</p>
+      <p className="text-3xl pt-8 text-title">{item.name}</p>
+      <p className="text-lg italic text-indigo-500 pb-20 text-title">{item.des}</p>
     </div>
   );
 };
