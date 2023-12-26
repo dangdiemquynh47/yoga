@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Header from "./header";
 import YogaPoses from "./components/landingpage/yoga_poses";
@@ -12,7 +13,10 @@ import MapStudio from "./components/landingpage/map";
 import Paratice from "./components/landingpage/paratice";
 import Video from "./components/landingpage/video";
 
+import { motion } from "framer-motion";
+
 const LandingPage = () => {
+ 
   return (
     <div className="w-full">
       <div className="">
@@ -24,11 +28,9 @@ const LandingPage = () => {
       <div className="mt-20">
         <HelpConfident />
       </div>
-      <div className="py-40">
-        {/* <Paratice /> */}
-      </div>
+      <div className="py-40">{/* <Paratice /> */}</div>
       <div className="">
-        <Video/>
+        <Video />
       </div>
       <div className="mt-40">
         <Experts />

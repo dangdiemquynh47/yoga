@@ -31,23 +31,6 @@ const Inspirational = () => {
         <span className="italic text-indigo-500">inspirational</span> words from
         our <br /> very best clients
       </p>
-      {/* <div className="grid sm:grid-cols-3 grid-cols-1 sm:px-[160px] px-8 justify-between pt-10 gap-20">
-        {info.map((item: any) => {
-          return (
-            <div className="" key={item.avt}>
-              <div className="flex gap-4">
-                <img src={"/images/" + item.avt} alt="" className="h-20 w-20" />
-                <div className="">
-                  <p className="text-3xl">{item.name}</p>
-                  <p className="text-lg text-indigo-500">{item.job}</p>
-                </div>
-              </div>
-              <p className="pt-4 text-neutral-600">{item.des}</p>
-            </div>
-          );
-        })}
-      </div> */}
-
       <div className="px-40 pt-16">
         <Swiper
           modules={[Autoplay]}
@@ -74,6 +57,7 @@ const Inspirational = () => {
           // onSwiper={(swiper) => console.log(swiper)}
           loop={true}
           slidesPerView={3}
+          spaceBetween={50}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
@@ -81,7 +65,7 @@ const Inspirational = () => {
         >
           {info.map((item: any) => {
             return (
-              <SwiperSlide key={item.avt + "hello"} className="relative">
+              <SwiperSlide key={item.des} className="">
                   <div className="flex gap-4">
                     <img
                       src={"/images/" + item.avt}

@@ -52,13 +52,13 @@ const YogaLifeStyle = () => {
             <div
               className={
                 "w-full flex flex-col items-center justify-center " +
-                (index === 1 || index == 4 ? "md:mt-24" : "")
+                (index === 1 || index == 4 ? "md:mt-28" : "")
               }
               key={item.img}
             >
               <p className="w-fit px-5 text-orange-500 translate-y-[50%] py-1 bg-white">{dayjs("2019-01-25").format("MMMM DD, YYYY")}</p>
-              <div className="transition duration-150 ease-out hover:ease-in cursor-pointer">
-                <img src={"/images/" + item.bigimg} alt="" className="" />
+              <div className="duration-150  hover:ease-in cursor-pointer">
+                <img src={"/images/" + item.bigimg} alt="" className="ease-out duration-300" />
               </div>
               <div className="pt-10 flex flex-col items-center justify-center">
                 <img src={"/images/" + item.smallimg} alt="" className="" />

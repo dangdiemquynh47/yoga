@@ -21,7 +21,7 @@ const MeetOurExperts = () => {
         })}
       </div> */}
 
-      <div className="pt-20 translate-y-[20%] mx-8">
+      <div className="translate-y-[20%] mx-8">
         <Swiper
           modules={[Autoplay]}
           breakpoints={{
@@ -61,17 +61,6 @@ const MeetOurExperts = () => {
                   alt=""
                   className="h-full w-full"
                 />
-
-                {/* <div className="flex flex-col gap-6 absolute text-7xl text-white bottom-10 left-10 ">
-                  <p>{item.text}</p>
-                  <div className="group flex items-center justify-center gap-2 py-4 bg-rose-100 w-fit overflow-hidden">
-                    <div className="h-[1px] w-6 group-hover:-translate-x-[14px] duration-300 bg-orange-500"></div>
-                    <button className="text-orange-500 text-[12px]">
-                      BOOK NOW
-                    </button>
-                    <div className="h-[1px] w-6 group-hover:translate-x-[14px] duration-300 bg-orange-500"></div>
-                  </div>
-                </div> */}
               </SwiperSlide>
             );
           })}

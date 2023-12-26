@@ -29,3 +29,20 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+
+.star {
+  fill: none;
+    stroke-width: 1px;
+    transition-duration: 3000;
+    stroke-dasharray: 1353px;
+    stroke-dashoffset: 0;
+    animation: move 10s linear infinite; 
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes move {
+  100% {
+      stroke-dashoffset: 100%;
+  }
+}
