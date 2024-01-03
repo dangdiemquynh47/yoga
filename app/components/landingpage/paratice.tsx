@@ -148,7 +148,7 @@ const Paratice = () => {
                   {data.map((item: any) => {
                     const title = item.title || "";   
                     return (
-                      <td className="p-6 text-center border-r-[1px] border-dashed border-[#ffdac5] ">
+                      <td className="p-6 text-center border-r-[1px] border-dashed border-[#ffdac5] " key={item.title}>
                         {time && title}
                       </td>
                     );
