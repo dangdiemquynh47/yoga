@@ -115,7 +115,6 @@ export function MenuIcon(props: any) {
 
 export function StarIcon(props: any) {
   const variants =  props
-  console.log( props.delay);
   
   return (
     <motion.svg

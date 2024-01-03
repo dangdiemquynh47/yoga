@@ -11,7 +11,6 @@ import {
 
 const Header = () => {
   const [header, setHeader] = useState("");
-  console.log(header);
 
   const menu = ["HOME", "PAGES", "CLASSES", "logo", "BLOG", "SHOP", "LANDING"];
   return (
@@ -34,7 +33,7 @@ const Header = () => {
             >
               {item === "logo" ? (
                 <img
-                  src="images/Logo-img1.png"
+                  src="images/logo-remove-bg.png"
                   alt=""
                   className="w-[69px] h-[69px]"
                 />
@@ -47,7 +46,7 @@ const Header = () => {
       </div>
 
       <div className="md:hidden block">
-        <img src="images/Logo-img1.png" alt=""  className="w-[50px] h-[50px]"/>
+        <img src="images/logo-remove-bg.png" alt=""  className="w-[50px] h-[50px]"/>
       </div>
 
       <div className="flex gap-4 items-center justify-center">

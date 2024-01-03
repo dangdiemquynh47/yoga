@@ -76,8 +76,6 @@ const Item = ({ item, index }: any) => {
     },
   };
 
-  console.log(animate + "" + index, index);
-
   return (
     <div
       className="text-center relative"

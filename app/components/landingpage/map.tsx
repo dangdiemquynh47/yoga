@@ -9,10 +9,10 @@ const MapStudio = () => {
           Yoga studio{" "}
           <span className="italic text-indigo-500">San Francisco</span>
         </p>
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-8 pt-6 w-full justify-between">
-          <div className="w-">
+        <div className="text-table grid sm:grid-cols-2 grid-cols-1 gap-8 pt-6 w-full justify-between">
+          <div className="">
             <p>
-              2-38 San Jacinto Way <br /> San Francisco, CA 94127 <br /> USA
+              2nd floor, 50 Nguyễn <br /> Văn Nguyễn, Tân Định, <br />Quận 1
             </p>
           </div>
           <div className="">
