@@ -23,7 +23,7 @@ const HelpConfident = () => {
       {/* <div className="border-[1px] border-solid border-amber-500 w-fit px-10 py-3 text-amber-500 text-md cursor-pointer mt-4">
         <p>READ MORE</p>
       </div> */}
-      <div className="mt-4 group flex items-center justify-center gap-2 py-4 w-fit overflow-hidden border-primary border-[1px] border-solid">
+      <div className="cursor-pointer mt-4 group flex items-center justify-center gap-2 py-4 w-fit overflow-hidden border-primary border-[1px] border-solid">
         <div className="h-[1px] w-6 group-hover:-translate-x-[14px] duration-300 bg-primary"></div>
         <button className="text-primary font-semibold text-[12px] px-4 text-md">READ MORE</button>
         <div className="h-[1px] w-6 group-hover:translate-x-[14px] duration-300 bg-primary"></div>

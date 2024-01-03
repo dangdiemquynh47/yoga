@@ -12,7 +12,7 @@ const MapStudio = () => {
         <div className="text-table grid sm:grid-cols-2 grid-cols-1 gap-8 pt-6 w-full justify-between">
           <div className="">
             <p>
-              2nd floor, 50 Nguyễn <br /> Văn Nguyễn, Tân Định, <br />Quận 1
+              Tầng 2, 50 Nguyễn <br /> Văn Nguyễn, Tân Định, <br />Quận 1
             </p>
           </div>
           <div className="">

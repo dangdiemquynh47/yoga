@@ -22,7 +22,7 @@ const Footer = () => {
       </div>
       <div className="bg-[url('/images/bg.jpg')] sm:px-[250px] pb-[120px] pt-[240px] w-full">
         <div className="items-center flex justify-center pb-10">
-          <img src="/images/logo-remove-bg.png" alt="" className="w-20 h-20" />
+          <img src="/images/logo_remove.png" alt="" className="w-20 h-20" />
         </div>
         <div className="flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center">
           <div className="md:order-first order-1 flex flex-row md:flex-col text-center items-center md:gap-4 gap-10 text-[12px]">
