@@ -27,9 +27,9 @@ const LandingPage = () => {
       <div className="mt-20">
         <HelpConfident />
       </div>
-      <div className="mt-40">
+      {/* <div className="mt-40">
         <Paratice />
-      </div>
+      </div> */}
       <div className="">
         <Video />
       </div>

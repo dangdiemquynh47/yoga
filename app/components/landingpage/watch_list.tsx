@@ -12,7 +12,7 @@ const WatchList = () => {
   ];
   return (
     <div className="max-w-screen overflow-hidden">
-      <div className="md:w-[150%] w-[220%] bg-[url('/images/bg.jpg')] md:pl-20 pb-40">
+      <div className="md:w-[150%] w-[220%] bg-[#fbf5e8] md:pl-20 pb-40">
         <Swiper
           modules={[Autoplay]}
           breakpoints={{
@@ -55,11 +55,11 @@ const WatchList = () => {
                 <div className="flex flex-col gap-6 absolute md:text-7xl text-4xl text-white md:bottom-10 md:left-10 bottom-6 left-6 ">
                   <p className="text-title">{item.text}</p>
                   <div className="cursor-pointer group flex items-center justify-center gap-2 md:py-4 py-1 h-fit bg-button w-fit overflow-hidden">
-                    <div className="h-[1px] w-6 group-hover:-translate-x-[14px] duration-300 bg-orange-500"></div>
-                    <button className="text-orange-500 text-[12px]">
+                    <div className="h-[1px] w-6 group-hover:-translate-x-[14px] duration-300 bg-white"></div>
+                    <button className="text-white text-[12px]">
                       BOOK NOW
                     </button>
-                    <div className="h-[1px] w-6 group-hover:translate-x-[14px] duration-300 bg-orange-500"></div>
+                    <div className="h-[1px] w-6 group-hover:translate-x-[14px] duration-300 bg-white"></div>
                   </div>
                 </div>
               </SwiperSlide>

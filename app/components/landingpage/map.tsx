@@ -50,9 +50,9 @@ const MapStudio = () => {
         </button> */}
         <div className="mt-8 flex flex-col gap-6 text-7xl text-white">
           <div className="group flex items-center justify-center gap-2 py-4 bg-button w-fit overflow-hidden">
-            <div className="h-[1px] w-8 group-hover:-translate-x-[14px] duration-300 bg-primary"></div>
-            <button className="text-primary text-[12px] px-4">SUBMIT</button>
-            <div className="h-[1px] w-8 group-hover:translate-x-[14px] duration-300 bg-primary"></div>
+            <div className="h-[1px] w-8 group-hover:-translate-x-[14px] duration-300 bg-white"></div>
+            <button className="text-white text-[12px] px-4">SUBMIT</button>
+            <div className="h-[1px] w-8 group-hover:translate-x-[14px] duration-300 bg-white"></div>
           </div>
         </div>
       </div>

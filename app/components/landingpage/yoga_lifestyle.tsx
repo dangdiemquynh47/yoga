@@ -55,7 +55,7 @@ const YogaLifeStyle = () => {
     },
   };
   return (
-    <div className="md:p-40 pt-20 pb-60 px-8 bg-[url('/images/bg.jpg')] w-full relative">
+    <div className="md:p-40 pt-20 pb-60 px-8 bg-[#fbf5e8] w-full relative">
        <div className="pb-10 absolute top-0 left-[50%] -translate-y-[25%]">
         <div className="overflow-hidden ">
           <motion.div

@@ -14,7 +14,7 @@ const Header = () => {
 
   const menu = ["HOME", "PAGES", "CLASSES", "logo", "BLOG", "SHOP", "LANDING"];
   return (
-    <div className="w-full md:h-[103px] h-fit py-2.5 md:px-[82px] px-4 bg-[url('/images/bg.jpg')] flex items-center justify-between">
+    <div className="w-full md:h-[103px] h-fit py-2.5 md:px-[82px] px-4 bg-[#fbf5e8] flex items-center justify-between">
       <div className="md:flex hidden gap-4 items-center justify-center">
         <FacebookIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
         <InstagramIcon className='md:hover:stroke-orange-500 duration-300 cursor-pointer'/>
@@ -26,14 +26,14 @@ const Header = () => {
             <div
               key={item}
               className={
-                "cursor-pointer hover:text-amber-500 duration-300 text-title " +
-                (item === header ? "text-amber-500" : "")
+                "cursor-pointer font-medium text-black duration-300 text-title text-header-hover " +
+                (item === header ? "text-header" : "")
               }
               onClick={() => setHeader(item)}
             >
               {item === "logo" ? (
                 <img
-                  src="images/logo_remove.png"
+                  src="images/logo-remove-bg.png"
                   alt=""
                   className="w-[69px] h-[69px]"
                 />
@@ -46,7 +46,7 @@ const Header = () => {
       </div>
 
       <div className="md:hidden block">
-        <img src="images/logo_remove.png" alt=""  className="w-[50px] h-[50px]"/>
+        <img src="images/logo-remove-bg.png" alt=""  className="w-[50px] h-[50px]"/>
       </div>
 
       <div className="flex gap-4 items-center justify-center">

@@ -93,7 +93,7 @@ const Item = ({ item, index }: any) => {
           }
         />
         <div className={
-            "w-full px-10  absolute top-0 left-0 opacity-0 group-hover:opacity-100 text-black bg-[url('/images/bg.jpg')] " +
+            "w-full px-10  absolute top-0 left-0 opacity-0 group-hover:opacity-100 text-black bg-[#fbf5e8] " +
             (index % 2 !== 0 ? "h-[330px] 2xl:h-[500px]" : "h-[400px] 2xl:h-[580px]")
           }
         >

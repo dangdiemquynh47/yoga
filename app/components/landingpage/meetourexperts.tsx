@@ -19,7 +19,7 @@ const MeetOurExperts = () => {
     },
   };
   return (
-    <div className=" bg-[url('/images/bg.jpg')] w-full px-8 ">
+    <div className=" bg-[#fbf5e8] w-full px-8 ">
        <div className=" -translate-y-[30%]">
         <div className="overflow-hidden ">
           <motion.div

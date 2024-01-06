@@ -77,8 +77,28 @@ body {
 }
 
 .bg-button {
-  background-color: #ffe8db;
+  background-color: #96af52;
 }
+
+.border-button {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #96af52;
+}
+
+.text-button {
+  color: #698240;
+}
+.text-button-hover:hover {
+  color: #96af52;
+}
+.text-header {
+  color: #ef6e37;
+}
+.text-header-hover:hover {
+  color: #ef6e37;
+}
+
 
 .text-table {
   font-family: 'Montserrat', sans-serif;
