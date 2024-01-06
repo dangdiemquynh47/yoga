@@ -48,7 +48,7 @@ const Experts = () => {
         />
       </div>
         <p className="text-center text-4xl text-title">
-          Meet the <span className="italic text-indigo-500">experts</span> that
+          Meet the <span className="italic text-primary">experts</span> that
           will guide you on your <br /> way to better everyday life
         </p>
         <div className="grid md:grid-cols-4 grid-cols-1 md:gap-8 pt-16">
@@ -83,7 +83,7 @@ const Item = ({ item, index }: any) => {
       onMouseEnter={() => setAnimate(true)}
       onMouseLeave={() => setAnimate(false)}
     >
-      <div className="group ">
+      <div className="group rounded-sm overflow-hidden shadow-sm">
         <img
           src={"images/" + item.img}
           alt=""
@@ -130,7 +130,7 @@ const Item = ({ item, index }: any) => {
         </div>
       </div>
       <p className="text-3xl pt-8 text-title">{item.name}</p>
-      <p className="text-lg italic text-indigo-500 pb-20 text-title">{item.des}</p>
+      <p className="text-lg italic text-primary pb-20 text-title">{item.des}</p>
     </div>
   );
 };

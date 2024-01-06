@@ -12,7 +12,7 @@ const WatchList = () => {
   ];
   return (
     <div className="max-w-screen overflow-hidden">
-      <div className="md:w-[150%] w-[220%] bg-[#fbf5e8] md:pl-20 pb-40">
+      <div className="md:w-[150%] w-[220%] bg-be/20 md:pl-20 pb-40">
         <Swiper
           modules={[Autoplay]}
           breakpoints={{

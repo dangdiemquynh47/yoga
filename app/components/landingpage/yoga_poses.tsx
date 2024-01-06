@@ -40,7 +40,7 @@ const YogaPoses = () => {
         />
       </div>
       <p className="text-4xl text-title">
-        A joyfull <span className="italic text-indigo-500">investment</span> in
+        A joyfull <span className="italic text-primary font-bold">investment</span> in
         your body, <br /> mind and spirit
       </p>
       <div className="group flex flex-col sm:flex-row md:gap-20 gap-10 items-center justify-center mt-12 text-2xl text-title">

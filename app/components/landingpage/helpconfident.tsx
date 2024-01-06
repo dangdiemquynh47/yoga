@@ -8,9 +8,9 @@ const HelpConfident = () => {
   return (
     <div className="w-full px-10 md:px-20 2xl:px-60  md:p-[110px] pt-[110px] bg-[#fbf5e8] relative">
       <p className="w-fit text-4xl pb-10 text-title">
-        Hi! My name is <span className="italic text-indigo-500">Alisia</span>{" "}
+        Hi! My name is <span className="italic text-primary">Alisia</span>{" "}
         and I’m here to help <br /> you find the confidence you need to feel <br />{" "}
-        <span className="italic text-indigo-500">amazing</span> in your body!
+        <span className="italic text-primary">amazing</span> in your body!
       </p>
       {list.map((item: any) => {
         return (
@@ -31,7 +31,7 @@ const HelpConfident = () => {
       <img
         src="/images/helpconfident.jpg"
         alt=""
-        className="relative md:translate-y-0 translate-y-[25%] md:absolute md:top-[110px] 2xl:right-60 md:right-20"
+        className="relative md:translate-y-0 translate-y-[25%] md:absolute md:top-[110px] 2xl:right-60 md:right-20 rounded-sm "
       />
     </div>
   );
