@@ -863,3 +863,36 @@ export function HathaYoga(props: any) {
     </svg>
   );
 }
+
+
+export function ChevronLeftIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#000"
+      height="800px"
+      width="800px"
+      viewBox="0 0 511.641 511.641"
+      xmlSpace="preserve"
+      {...props}
+    >
+      <path d="M148.32 255.76L386.08 18c4.053-4.267 3.947-10.987-.213-15.04a10.763 10.763 0 00-14.827 0L125.707 248.293a10.623 10.623 0 000 15.04L371.04 508.667c4.267 4.053 10.987 3.947 15.04-.213a10.763 10.763 0 000-14.827L148.32 255.76z" />
+    </svg>
+  );
+}
+
+export function ChevronRightIcon(props: any) {
+  return (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="#000"
+    height="800px"
+    width="800px"
+    viewBox="0 0 511.949 511.949"
+    xmlSpace="preserve"
+    {...props}
+  >
+    <path d="M386.235 248.308L140.902 2.975c-4.267-4.053-10.987-3.947-15.04.213a10.763 10.763 0 000 14.827l237.76 237.76-237.76 237.867c-4.267 4.053-4.373 10.88-.213 15.04 4.053 4.267 10.88 4.373 15.04.213l.213-.213 245.333-245.333a10.624 10.624 0 000-15.041z" />
+  </svg>
+  );
+}

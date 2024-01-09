@@ -3,6 +3,7 @@ import { StarIcon } from "../svg";
 import React from "react";
 import { motion } from "framer-motion";
 
+
 const Experts = () => {
   const experts = [
     { img: "experts-1.jpg", name: "Maria Peterson", des: "Meditation" },

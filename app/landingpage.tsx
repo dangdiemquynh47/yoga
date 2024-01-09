@@ -3,7 +3,7 @@ import Image from "next/image";
 import Header from "./header";
 import YogaPoses from "./components/landingpage/yoga_poses";
 import HelpConfident from "./components/landingpage/helpconfident";
-import YogaLifeStyle from "./components/landingpage/yoga_lifestyle";
+import YogaLifeStyle from "./components/landingpage/blog";
 import Experts from "./components/landingpage/experts";
 import Inspirational from "./components/landingpage/inspirational";
 import WatchList from "./components/landingpage/watch_list";
@@ -12,8 +12,6 @@ import MeetOurExperts from "./components/landingpage/meetourexperts";
 import MapStudio from "./components/landingpage/map";
 import Paratice from "./components/landingpage/paratice";
 import Video from "./components/landingpage/video";
-
-import { motion } from "framer-motion";
 
 const LandingPage = () => {
   return (
@@ -49,6 +47,7 @@ const LandingPage = () => {
         <MapStudio />
       </div>
     </div>
+   
   );
 };
 
