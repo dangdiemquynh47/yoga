@@ -56,7 +56,7 @@ const YogaLifeStyle = () => {
   };
   return (
     <div className="md:p-40 pt-20 pb-60 px-8 bg-[#fbf5e8] w-full relative">
-       <div className="pb-10 absolute top-0 left-[50%] -translate-y-[25%]">
+      <div className="pb-10 absolute top-0 left-[50%] -translate-y-[25%]">
         <div className="overflow-hidden ">
           <motion.div
             // initial=" hidden"
@@ -80,8 +80,12 @@ const YogaLifeStyle = () => {
       </div>
       <p className="text-center text-4xl text-title">
         Explore the{" "}
-        <span className="italic text-indigo-500">yoga <br className="md:hidden block"/> lifestyle</span> and learn <br className="md:hidden block"/>
-        more <br className="hidden md:block"/> about our <br className="md:hidden block"/> community
+        <span className="italic text-primary">
+          yoga <br className="md:hidden block" /> lifestyle
+        </span>{" "}
+        and learn <br className="md:hidden block" />
+        more <br className="hidden md:block" /> about our{" "}
+        <br className="md:hidden block" /> community
       </p>
       <div className="grid sm:grid-cols-3 grid-cols-1 md:gap-x-16 gap-x-20">
         {lifestyle.map((item: any, index: number) => {
@@ -91,11 +95,17 @@ const YogaLifeStyle = () => {
                 "w-full flex flex-col items-center justify-center " +
                 (index === 1 || index == 4 ? "md:mt-28" : "")
               }
-              key={item.img + "lifestyle"}
+              key={item.smallimg + index + "lifestyle"}
             >
-              <p className="w-fit px-5 text-orange-500 translate-y-[50%] z-10 py-1 bg-white">{dayjs("2019-01-25").format("MMMM DD, YYYY")}</p>
-              <div className="duration-150  hover:ease-in cursor-pointer overflow-hidden">
-                <img src={"/images/" + item.bigimg} alt="" className="duration-300 scale-105 hover:scale-100" />
+              <p className="w-fit px-5 text-orange-500 translate-y-[50%] z-10 py-1 bg-white">
+                {dayjs("2019-01-25").format("MMMM DD, YYYY")}
+              </p>
+              <div className="duration-150  hover:ease-in cursor-pointer overflow-hidden rounded-sm">
+                <img
+                  src={"/images/" + item.bigimg}
+                  alt=""
+                  className="duration-300 scale-105 hover:scale-100 "
+                />
               </div>
               <div className="pt-10 flex flex-col items-center justify-center">
                 <img src={"/images/" + item.smallimg} alt="" className="" />

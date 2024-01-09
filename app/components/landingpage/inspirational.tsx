@@ -53,13 +53,11 @@ const Inspirational = () => {
       name: "Jack Davids",
       job: "Tenis player",
       des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
-    }
-    
-
+    },
   ];
   return (
     <div className="">
-        <div className="pb-10 ">
+      <div className="pb-10 ">
         <div className="overflow-hidden ">
           <motion.div
             // initial=" hidden"
@@ -83,7 +81,7 @@ const Inspirational = () => {
       </div>
       <p className="text-4xl text-center text-title">
         Beautiful and{" "}
-        <span className="italic text-indigo-500">inspirational</span> words from
+        <span className="italic text-primary">inspirational</span> words from
         our <br /> very best clients
       </p>
       <div className="md:px-40 px-8 pt-16">
@@ -118,21 +116,23 @@ const Inspirational = () => {
             disableOnInteraction: false,
           }}
         >
-          {info.map((item: any) => {
+          {info.map((item: any, index) => {
             return (
-              <SwiperSlide key={item.des + "skfhbjh"} className="">
-                  <div className="flex gap-4">
-                    <img
-                      src={"/images/" + item.avt}
-                      alt=""
-                      className="h-20 w-20"
-                    />
-                    <div className="">
-                      <p className="text-3xl text-title">{item.name}</p>
-                      <p className="text-lg text-indigo-500 text-title">{item.job}</p>
-                    </div>
+              <SwiperSlide key={"item.des" + index} className="">
+                <div className="flex gap-4">
+                  <img
+                    src={"/images/" + item.avt}
+                    alt=""
+                    className="h-20 w-20"
+                  />
+                  <div className="">
+                    <p className="text-3xl text-title">{item.name}</p>
+                    <p className="text-lg text-primary text-title">
+                      {item.job}
+                    </p>
                   </div>
-                  <p className="pt-4 text-neutral-600">{item.des}</p>
+                </div>
+                <p className="pt-4 text-neutral-600">{item.des}</p>
               </SwiperSlide>
             );
           })}

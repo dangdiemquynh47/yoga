@@ -27,14 +27,14 @@ const MapStudio = () => {
             name=""
             id=""
             placeholder="Name"
-            className="border-secondary focus:outline-none focus:border-orange-400 border-[0.5px] border-solid py-3 px-5"
+            className="border-secondary rounded-sm focus:outline-none focus:border-orange-400 border-[0.5px] border-solid py-3 px-5"
           />
           <input
             type="text"
             name=""
             id=""
             placeholder="Email"
-            className="border-secondary focus:outline-none focus:border-orange-400 border-[0.5px] border-solid py-3 px-5"
+            className="border-secondary rounded-sm focus:outline-none focus:border-orange-400 border-[0.5px] border-solid py-3 px-5"
           />
         </div>
         <div className="w-full">
@@ -42,14 +42,14 @@ const MapStudio = () => {
             name=""
             id=""
             placeholder="Message"
-            className="resize-none py-3 px-5 h-[154px] w-full mt-6 border-secondary focus:outline-none focus:border-orange-400 border-[0.5px] border-solid"
+            className="resize-none py-3 px-5 h-[154px] w-full mt-6 border-secondary focus:outline-none focus:border-orange-400 border-[0.5px] border-solid rounded-sm"
           ></textarea>
         </div>
         {/* <button className="text-sm mt-8 px-14 py-3 bg-orange-100 text-orange-500">
           SUBMIT
         </button> */}
         <div className="mt-8 flex flex-col gap-6 text-7xl text-white">
-          <div className="group flex items-center justify-center gap-2 py-4 bg-button w-fit overflow-hidden">
+          <div className="group flex items-center justify-center gap-2 py-4 bg-button w-fit overflow-hidden rounded-sm">
             <div className="h-[1px] w-8 group-hover:-translate-x-[14px] duration-300 bg-white"></div>
             <button className="text-white text-[12px] px-4">SUBMIT</button>
             <div className="h-[1px] w-8 group-hover:translate-x-[14px] duration-300 bg-white"></div>

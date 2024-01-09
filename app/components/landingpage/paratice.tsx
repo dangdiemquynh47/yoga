@@ -1,35 +1,28 @@
-"use client";
-import { useState, useEffect } from "react";
 import { StarIcon } from "../svg";
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { axiosInstance } from "@/libs/axios";
+import dayjs from "dayjs";
+import Vertical from "../wigdet/vertical";
 
-const Paratice = () => {
-  const [list, setList] = useState([]);
-  useEffect(() => {
-    axiosInstance
-      .get(`/items/time_shift?fields=*`)
-      .then((data) => {
-        setList(data.data);
-      })
-      .catch((data) => {});
-  }, []);
+const Paratice = async () => {
+  const time_shift: any = await axiosInstance
+    .get(`/items/time_shift?fields=*`)
+    .catch((data) => {});
 
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axiosInstance
-      .get(`/items/class?fields=*`)
-      .then((data) => {
-        setData(data.data);
-      })
-      .catch((data) => {});
-  }, []);
+  const list = (time_shift?.data || []).sort((a: any, b: any) => {
+    return (
+      dayjs("11/22/2023 " + a.start_time, "DD/MM/YYYY HH:mm:ss").unix() -
+      dayjs("11/22/2023 " + b.start_time, "DD/MM/YYYY HH:mm:ss").unix()
+    );
+  });
 
-  const time = data.filter((items:any) => items.time_shift === 29 && items.day.includes('2'))
+  const resClasses = await axiosInstance
+    .get(`/items/class?fields=*`)
+    .catch((data) => {});
 
-  const [tabs, setTabs] = useState(0);
-  const choice = ["All Events", "Hatha Yoga", "Power Yoga", "Yoga Sculpt"];
+  const classes = resClasses?.data || [];
+  // const choice = ["All Events", "Hatha Yoga", "Power Yoga", "Yoga Sculpt"];
   const table_header = [
     " ",
     "Monday",
@@ -41,6 +34,8 @@ const Paratice = () => {
     "Sunday",
   ];
 
+  const days = ["2", "3", "4", "5", "6", "7", "CN"];
+
   const icon = {
     hidden: {
       opacity: 0,
@@ -51,22 +46,12 @@ const Paratice = () => {
       pathLength: 1,
     },
   };
-  
+
   return (
     <div className="w-full">
       <div className="pb-10 ">
         <div className="overflow-hidden ">
-          <motion.div
-            // initial=" hidden"
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              ease: "easeInOut",
-              // default: { duration: 0.2, ease: "anticipate" },
-              // fill: { duration: 0.2, ease: [1, 0, 0.8, 1] },
-              duration: 0.4,
-            }}
-            className="mx-auto w-[1px] bg-[#FF782B] h-[150px] "
-          ></motion.div>
+          <Vertical />
         </div>
 
         <StarIcon
@@ -77,19 +62,19 @@ const Paratice = () => {
         />
       </div>
       <p className="text-center text-4xl text-title">
-        A personal <span className="italic text-indigo-500">practice</span>{" "}
+        A personal <span className="italic text-primary">practice</span>{" "}
         <br className="block md:hidden" />
         that’s right for you.
         <br className="block md:hidden" /> Try all{" "}
         <br className="md:block hidden" /> the classes
         <br className="block md:hidden" /> we have available
       </p>
-      <div className="grid sm:grid-cols-4 grid-cols-2 px-12 justify-center items-center sm:px-[400px] gap-6 mt-20">
+      {/* <div className="grid sm:grid-cols-4 grid-cols-2 px-12 justify-center items-center sm:px-[400px] gap-6 mt-20">
         {choice.map((item: any, index: number) => {
           return (
             <div
               className={
-                "cursor-pointer border-[1px] border-solid  text-center text-sm text-orange-400 px-5 py-2 text-center hover:bg-rose-50 duration-300 " +
+                "cursor-pointer border-[1px] border-solid text-sm text-orange-400 px-5 py-2 text-center hover:bg-rose-50 duration-300 " +
                 (tabs === index
                   ? " bg-rose-50 border-rose-50"
                   : "bg-white border-orange-100")
@@ -101,15 +86,15 @@ const Paratice = () => {
             </div>
           );
         })}
-      </div>
-      <div className="mt-10 items-center justify-center md:flex hidden">
-        <table className="border-collapse border border-[#fff1e9] border-[3px] ">
+      </div> */}
+      <div className="mt-10 items-center justify-center md:flex hidden px-10 md:px-32">
+        <table className="w-full">
           <thead>
-            <tr>
+            <tr className="border-[1px] border-secondary border-dashed">
               {table_header.map((item: any) => {
                 return (
                   <th
-                    className="border border-[#fff1e9] border-[3px] px-6 py-2"
+                    className=" p-6 text-black/70 border-r-[1px] last:border-r-[0px] border-dashed border-secondary font-semibold"
                     key={item}
                   >
                     {item}
@@ -133,23 +118,41 @@ const Paratice = () => {
               return (
                 <tr
                   className={
-                    "text-table text-md border-b-[1px] border-dashed border-[#ffdac5] " +
+                    "border-[1px] border-secondary border-dashed " +
                     (index % 2 !== 0 ? "bg-[#fff9f6]" : "bg-[#fff1e9]")
                   }
                   key={item.id}
                 >
                   <td
                     className={
-                      "p-6 border-b-[1px] border-r-[1px] border-dashed border-[#ffdac5] "
+                      "p-6 border-b-[1px] border-r-[1px] border-dashed border-secondary "
                     }
                   >
                     {timestart} - {timeend}
                   </td>
-                  {data.map((item: any) => {
-                    const title = item.title || "";   
+                  {days.map((day: any, index) => {
+                    // điều kiện 1 lớp nằm trong ô này là, class.timeshift === timeShift.id
+                    //  class.days có chứa day
+                    const classAcitve = classes.find(
+                      (cls: any) =>
+                        cls.time_shift === item.id && cls.day.includes(day)
+                    );
+
                     return (
-                      <td className="p-6 text-center border-r-[1px] border-dashed border-[#ffdac5] " key={item.title}>
-                        {time && title}
+                      <td
+                        className="border-dashed border-secondary border-[1px] px-6 py-6 text-center"
+                        key={day + index}
+                      >
+                        {classAcitve?.title && (
+                          <>
+                            <div className=" text-primary">
+                              {classAcitve?.title || ""}
+                            </div>
+                            <div className="text-center text-secondary mt-1">
+                              Hiền Thi
+                            </div>
+                          </>
+                        )}
                       </td>
                     );
                   })}
