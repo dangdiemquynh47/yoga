@@ -79,10 +79,10 @@ const Inspirational = () => {
           animate="visible"
         />
       </div>
-      <p className="text-4xl text-center text-title">
+      <p className="text-4xl text-center text-title px-8">
         Beautiful and{" "}
-        <span className="italic text-primary">inspirational</span> words from
-        our <br /> very best clients
+        <span className="italic text-primary font-bold">inspirational</span> words from
+        our <br className="md:block hidden" /> very best clients
       </p>
       <div className="md:px-40 px-8 pt-16">
         <Swiper

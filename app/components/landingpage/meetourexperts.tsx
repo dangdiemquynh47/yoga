@@ -44,7 +44,7 @@ const MeetOurExperts = () => {
       </div>
       <p className="text-center text-4xl text-title">
         Come on down to our studio and meet <br /> our yoga{" "}
-        <span className="italic text-primary">experts</span>
+        <span className="italic text-primary font-bold">experts</span>
       </p>
       {/* <div className="sm:px-14 px-0 grid sm:grid-cols-3 grid-col-1 gap-8 translate-y-[22%] justify-between">
         {img.map((item: any) => {

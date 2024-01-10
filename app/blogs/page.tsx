@@ -1,6 +1,5 @@
 "use client";
 import dayjs from "dayjs";
-import { StarIcon } from "../svg";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -57,30 +56,10 @@ const Blog = () => {
   return (
     <div className="md:p-40 pt-20 pb-60 px-8 bg-[#fbf5e8] w-full relative">
       <div className="pb-10 absolute top-0 left-[50%] -translate-y-[25%]">
-        <div className="overflow-hidden ">
-          <motion.div
-            // initial=" hidden"
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              ease: "easeInOut",
-              // default: { duration: 0.2, ease: "anticipate" },
-              // fill: { duration: 0.2, ease: [1, 0, 0.8, 1] },
-              duration: 0.4,
-            }}
-            className="mx-auto w-[1px] bg-[#FF782B] h-[150px] "
-          ></motion.div>
-        </div>
-
-        <StarIcon
-          className="mx-auto stroke-[#FF782B]"
-          variants={icon}
-          delay={0.2}
-          animate="visible"
-        />
       </div>
       <p className="text-center text-4xl text-title">
         Explore the{" "}
-        <span className="italic text-primary font-bold">
+        <span className="italic text-primary">
           yoga <br className="md:hidden block" /> lifestyle
         </span>{" "}
         and learn <br className="md:hidden block" />

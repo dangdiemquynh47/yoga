@@ -5,10 +5,10 @@ import "swiper/css";
 
 const WatchList = () => {
   const swiper = [
-    { img: "yoga-1.jpg", text: "Body and Mind" },
-    { img: "yoga-2.jpg", text: "New Yoga Classes" },
-    { img: "yoga-3.jpg", text: "Group Sessions" },
-    { img: "yoga-4.jpg", text: "Your Happy Place" },
+    { img: "IMG_0547.jpg", text: "Body and Mind" },
+    { img: "IMG_0541-2.jpg", text: "New Yoga Classes" },
+    { img: "IMG_0553.jpg", text: "Group Sessions" },
+    { img: "IMG_0561-2.jpg", text: "Your Happy Place" },
   ];
   return (
     <div className="max-w-screen overflow-hidden">
@@ -48,7 +48,7 @@ const WatchList = () => {
             return (
               <SwiperSlide key={item.img + "hello"} className="">
                 <img
-                  src={"/images/" + item.img}
+                  src={"/images/malayoga/" + item.img}
                   alt=""
                   className="md:h-[80vh] md:w-full"
                 />

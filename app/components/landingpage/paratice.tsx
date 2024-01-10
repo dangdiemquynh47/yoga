@@ -62,7 +62,7 @@ const Paratice = async () => {
         />
       </div>
       <p className="text-center text-4xl text-title">
-        A personal <span className="italic text-primary">practice</span>{" "}
+        A personal <span className="italic text-primary font-bold">practice</span>{" "}
         <br className="block md:hidden" />
         that’s right for you.
         <br className="block md:hidden" /> Try all{" "}
@@ -87,7 +87,7 @@ const Paratice = async () => {
           );
         })}
       </div> */}
-      <div className="mt-10 items-center justify-center md:flex hidden px-10 md:px-32">
+      <div className="mt-10 items-center justify-center md:flex hidden px-10 md:px-20">
         <table className="w-full">
           <thead>
             <tr className="border-[1px] border-secondary border-dashed">
@@ -125,7 +125,7 @@ const Paratice = async () => {
                 >
                   <td
                     className={
-                      "p-6 border-b-[1px] border-r-[1px] border-dashed border-secondary "
+                      "p-6 whitespace-nowrap border-b-[1px] border-r-[1px] border-dashed border-secondary text-center"
                     }
                   >
                     {timestart} - {timeend}
@@ -161,6 +161,10 @@ const Paratice = async () => {
             })}
           </tbody>
         </table>
+      </div>
+
+      <div className="md:hidden ">
+              skjfb
       </div>
     </div>
   );

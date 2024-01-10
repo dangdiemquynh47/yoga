@@ -7,12 +7,12 @@ const MapStudio = () => {
       <div className="">
         <p className="text-center text-4xl text-title">
           Yoga studio{" "}
-          <span className="italic text-indigo-500">San Francisco</span>
+          <span className="italic text-primary font-bold">Ho Chi Minh City</span>
         </p>
         <div className="text-table grid sm:grid-cols-2 grid-cols-1 gap-8 pt-6 w-full justify-between">
           <div className="">
             <p>
-              Tầng 2, 50 Nguyễn <br /> Văn Nguyễn, Tân Định, <br />Quận 1
+              2nd floor, 50 Nguyen <br /> Van Nguyen, Tan Dinh, <br />District 1
             </p>
           </div>
           <div className="">

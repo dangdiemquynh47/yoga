@@ -1,6 +1,5 @@
 import YogaPoses from "./landingpage/yoga_poses";
 import HelpConfident from "./landingpage/helpconfident";
-import YogaLifeStyle from "./landingpage/yoga_lifestyle";
 import Experts from "./landingpage/experts";
 import Inspirational from "./landingpage/inspirational";
 import WatchList from "./landingpage/watch_list";
@@ -8,6 +7,7 @@ import MeetOurExperts from "./landingpage/meetourexperts";
 import MapStudio from "./landingpage/map";
 import Paratice from "./landingpage/paratice";
 import Video from "./landingpage/video";
+import Blog from "./landingpage/blog";
 const LandingPage = () => {
   return (
     <div className="w-full">
@@ -26,11 +26,11 @@ const LandingPage = () => {
       <div className="">
         <Video />
       </div>
-      <div className="pt-10">
+      {/* <div className="pt-10">
         <Experts />
-      </div>
+      </div> */}
       <div className="mt-20">
-        <YogaLifeStyle />
+        <Blog />
       </div>
       <div className="-translate-y-[10%] pb-40">
         <Inspirational />

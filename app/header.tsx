@@ -14,14 +14,13 @@ const Header = () => {
   const [header, setHeader] = useState("");
 
   const menu = [
-    "Home",
-    "Investment",
-    "About Me",
-    "logo",
-    "Schedules",
-
-    "Blogs",
-    "Contact Us",
+    {title: "Home", url: "/"},
+    {title: "Investment", url: "/investment"},
+    {title: "About Me", url: "/aboutme"},
+    {title: "logo", url: "/"},
+    {title: "Schedules", url: "/schedules"},
+    {title: "Blogs", url: "/blogs"},
+    {title: "Contact Us", url: "/contact"},
   ];
   return (
     <div className="w-full md:h-[103px] h-fit py-2.5 md:px-[82px] sticky top-0 z-20 shadow-md px-4 bg-[#fedfcd] text-black flex items-center justify-between">
@@ -33,24 +32,26 @@ const Header = () => {
       <div className="md:flex hidden gap-10 items-center justify-center">
         {menu.map((item: any) => {
           return (
-            <div
-              key={item}
-              className={
-                "cursor-pointer text-[20px] duration-300 text-title italic hover:text-primary text-bold" +
-                (item === header ? "text-header" : "")
-              }
-              onClick={() => setHeader(item)}
-            >
-              {item === "logo" ? (
-                <img
-                  src="images/logo-remove-bg.png"
-                  alt=""
-                  className="w-[69px] h-[69px]"
-                />
-              ) : (
-                item
-              )}
-            </div>
+            <Link href={item.url}  key={item.title}>
+              <div
+               
+                className={
+                  "cursor-pointer text-[20px] duration-300 text-title italic hover:text-primary text-bold" +
+                  (item.title === header ? "text-header" : "")
+                }
+                onClick={() => setHeader(item.title)}
+              >
+                {item.title === "logo" ? (
+                  <img
+                    src="images/logo-remove-bg.png"
+                    alt=""
+                    className="w-[69px] h-[69px]"
+                  />
+                ) : (
+                  item.title
+                )}
+              </div>
+            </Link>
           );
         })}
       </div>
