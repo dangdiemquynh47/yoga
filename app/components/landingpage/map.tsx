@@ -1,24 +1,36 @@
+import { MapIcon, PhoneIcon } from "../svg";
+
 const MapStudio = () => {
   return (
-    <div className="flex sm:flex-row flex-col gap-20 justify-between sm:px-40 px-8 w-full">
+    <div className="grid sm:grid-cols-2 gap-10 justify-between sm:px-40 px-8 w-full">
       <div className="">
-        <img src="" alt="" />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.95197726021914!2d106.68711288677669!3d10.793563027248991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528cf5aa0a06f%3A0xabdf26e118b8256f!2sSendou!5e0!3m2!1svi!2s!4v1705047669253!5m2!1svi!2s"
+          // width={600}
+          // height={450}
+          style={{ border: 1 }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full h-full"
+        />
       </div>
       <div className="">
         <p className="text-center text-4xl text-title">
-          Yoga studio{" "}
-          <span className="italic text-primary font-bold">Ho Chi Minh City</span>
+          <span className="italic text-primary font-bold">Mala Yoga</span> in Ho
+          Chi Minh City
         </p>
         <div className="text-table grid sm:grid-cols-2 grid-cols-1 gap-8 pt-6 w-full justify-between">
-          <div className="">
+          <div className="flex gap-4">
+            <MapIcon className="w-6 h-6 stroke-[1px] stroke-primary" />
             <p>
-              2nd floor, 50 Nguyen <br /> Van Nguyen, Tan Dinh, <br />District 1
+              2nd floor, 50 Nguyen <br /> Van Nguyen, Tan Dinh, <br />
+              District 1
             </p>
           </div>
-          <div className="">
-            <p>Phone: +85 (0) 225 639</p>
-            <p>Cell: +85 (0) 225 639</p>
-            <p>namaste@qodeinteractive.com</p>
+          <div className="flex gap-4">
+            <PhoneIcon className="w-6 h-6 fill-primary stroke-[1px]" />
+            <p>090 248 87 05</p>
+            {/* <p>namaste@qodeinteractive.com</p> */}
           </div>
         </div>
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-8 mt-10 w-full">

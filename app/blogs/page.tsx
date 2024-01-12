@@ -2,103 +2,12 @@
 import dayjs from "dayjs";
 import React from "react";
 import { motion } from "framer-motion";
+import Blog from "../components/landingpage/blog";
 
-const Blog = () => {
-  const lifestyle = [
-    {
-      bigimg: "lifestyle-1.jpg",
-      smallimg: "lotus.png",
-      title: "Fall in Love With Hatha Yoga",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae feugiat magna, ut mattis ligula. Aliquam ut rutrum est. Maecenas sit amet",
-    },
-    {
-      bigimg: "lifestyle-2.jpg",
-      smallimg: "hand.png",
-      title: "Hatha Yoga New Mindset",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae feugiat magna, ut mattis ligula. Aliquam ut rutrum est. Maecenas sit amet",
-    },
-    {
-      bigimg: "lifestyle-3.jpg",
-      smallimg: "zen.png",
-      title: "How Does Hatha Yoga Work?",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae feugiat magna, ut mattis ligula. Aliquam ut rutrum est. Maecenas sit amet",
-    },
-    {
-      bigimg: "lifestyle-4.jpg",
-      smallimg: "hand.png",
-      title: "10 Things for Your Yoga needs",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae feugiat magna, ut mattis ligula. Aliquam ut rutrum est. Maecenas sit amet",
-    },
-    {
-      bigimg: "lifestyle-5.jpg",
-      smallimg: "zen.png",
-      title: "New Yoga Muscle Stretches",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae feugiat magna, ut mattis ligula. Aliquam ut rutrum est. Maecenas sit amet",
-    },
-    {
-      bigimg: "lifestyle-6.jpg",
-      smallimg: "lotus.png",
-      title: "Gain Overall Flexibility",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae feugiat magna, ut mattis ligula. Aliquam ut rutrum est. Maecenas sit amet",
-    },
-  ];
-
-  const icon = {
-    hidden: {
-      opacity: 0,
-      pathLength: 0,
-    },
-    visible: {
-      opacity: 1,
-      pathLength: 1,
-    },
-  };
+export default async function Home({ params }: any) {
   return (
-    <div className="md:p-40 pt-20 pb-60 px-8 bg-[#fbf5e8] w-full relative">
-      <div className="pb-10 absolute top-0 left-[50%] -translate-y-[25%]">
-      </div>
-      <p className="text-center text-4xl text-title">
-        Explore the{" "}
-        <span className="italic text-primary">
-          yoga <br className="md:hidden block" /> lifestyle
-        </span>{" "}
-        and learn <br className="md:hidden block" />
-        more <br className="hidden md:block" /> about our{" "}
-        <br className="md:hidden block" /> community
-      </p>
-      <div className="grid sm:grid-cols-3 grid-cols-1 md:gap-x-16 gap-x-20">
-        {lifestyle.map((item: any, index: number) => {
-          return (
-            <div
-              className={
-                "w-full flex flex-col items-center justify-center " +
-                (index === 1 || index == 4 ? "md:mt-28" : "")
-              }
-              key={item.smallimg + index + "lifestyle"}
-            >
-              <p className="w-fit px-5 text-orange-500 translate-y-[50%] z-10 py-1 bg-white">
-                {dayjs("2019-01-25").format("MMMM DD, YYYY")}
-              </p>
-              <div className="duration-150  hover:ease-in cursor-pointer overflow-hidden rounded-sm">
-                <img
-                  src={"/images/" + item.bigimg}
-                  alt=""
-                  className="duration-300 scale-105 hover:scale-100 "
-                />
-              </div>
-              <div className="pt-10 flex flex-col items-center justify-center">
-                <img src={"/images/" + item.smallimg} alt="" className="" />
-                <p className="text-3xl text-center pt-6 hover:text-amber-500 duration-300 cursor-pointer text-title">
-                  {item.title}
-                </p>
-                <p className="text-center pt-6">{item.des}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+    <div className="">
+      <Blog />
     </div>
   );
-};
-
-export default Blog;
+}

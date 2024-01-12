@@ -164,7 +164,7 @@ const Paratice = async () => {
       </div>
 
       <div className="md:hidden ">
-              skjfb
+              
       </div>
     </div>
   );
