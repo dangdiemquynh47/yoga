@@ -33,6 +33,15 @@ const Paratice = async () => {
     "Saturday",
     "Sunday",
   ];
+  const dayword = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
 
   const days = ["2", "3", "4", "5", "6", "7", "CN"];
 
@@ -62,7 +71,8 @@ const Paratice = async () => {
         />
       </div>
       <p className="text-center text-4xl text-title">
-        A personal <span className="italic text-primary font-bold">practice</span>{" "}
+        A personal{" "}
+        <span className="italic text-primary font-bold">practice</span>{" "}
         <br className="block md:hidden" />
         that’s right for you.
         <br className="block md:hidden" /> Try all{" "}
@@ -145,11 +155,39 @@ const Paratice = async () => {
         </table>
       </div>
 
-      <div className="md:hidden ">
-              
+      <div className="md:hidden block px-4 py-10">
+        {dayword.map((item: any, index) => {
+          const day = days[index];
+       
+          return (
+            <div className="">
+              <p className="pt-10">{item}</p>
+              {list.map((item: any, index: number) => {
+                const classAcitve = classes.find(
+                  (cls: any) =>
+                    cls.time_shift === item.id && cls.day.includes(day)
+                );
+                if(!classAcitve) return null
+
+                const timeShiftInClass = time_shift.data.find((t:any)=> t.id === classAcitve.time_shift)
+                 return (
+                  <div className="flex border-b-[1px] py-2 border-solid">
+                    <div className=" text-primary">
+                      {classAcitve?.title}
+                    </div>
+                    <div className="ml-auto">
+                    {timeShiftInClass.start_time.slice(0, 5) } - { timeShiftInClass.end_time.slice(0,5) }
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
 
 export default Paratice;
+

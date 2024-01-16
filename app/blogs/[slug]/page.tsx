@@ -12,7 +12,6 @@ export default async function Home({ params }: any) {
     "/items/post?fields=*,images.*.*&filter[slug][_eq]=" + slug
   );
   const blog = post.data[0];
-  // console.log(blog.id);
   
   return (
     <div className="pt-6">

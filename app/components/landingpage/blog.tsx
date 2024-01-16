@@ -10,7 +10,7 @@ const Blog = async () => {
 
   return (
     <div id="blogs" className="md:p-40 pt-20 pb-60 px-8 bg-[#fbf5e8] w-full relative">
-      <div className="pb-10 absolute top-0 left-[50%] -translate-y-[25%]">
+      <div className="pb-10 absolute top-0 left-[50%] md:-translate-y-[25%] -translate-y-[50%] -translate-x-[50%] md:-translate-x-[0]">
         <Star />
       </div>
       <p className="text-center text-4xl text-title">
@@ -31,7 +31,7 @@ const Blog = async () => {
               <div
                 className={
                   "w-full h-full flex flex-col items-center justify-center " +
-                  (active && "md:translate-y-20")
+                  (active && "md:translate-y-20 ")
                 }
                 key={item.smallimg + index}
               >

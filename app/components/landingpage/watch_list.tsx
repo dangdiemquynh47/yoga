@@ -7,7 +7,7 @@ const WatchList = () => {
   const swiper = [
     { img: "IMG_0547.jpg", text: "Body and Mind" },
     { img: "IMG_0541-2.jpg", text: "New Yoga Classes" },
-    { img: "IMG_0553.jpg", text: "Group Sessions" },
+    { img: "IMG_0569-2.jpg", text: "Group Sessions" },
     { img: "IMG_0561-2.jpg", text: "Your Happy Place" },
   ];
   return (
