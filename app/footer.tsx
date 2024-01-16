@@ -2,20 +2,20 @@ import { FacebookIcon, InstagramIcon, YoutubeIcon } from "./components/svg";
 
 const Footer = () => {
   const img = [
-    "footer-1.jpg",
-    "footer-2.jpg",
-    "footer-3.jpg",
-    "footer-4.jpg",
-    "footer-5.jpg",
-    "footer-6.jpg"
+    "IMG_0896-2.jpg",
+    "IMG_0918-2.jpg",
+    "IMG_1024-2.jpg",
+    // "IMG_0989-2.jpg",
+    "IMG_0930-2.jpg",
+    "IMG_0975-2.jpg"
   ];
   return (
     <div className="w-full">
-      <div className="flex md:flex-row flex-col items-center justify-center sm:translate-y-[50%] ">
-        {img.map((item: any) => {
+      <div className="flex md:flex-row flex-col items-center justify-center md:translate-y-[50%] translate-y-[10%] md:gap-10">
+        {img.map((item: any, index:number) => {
           return (
-            <div className="" key={item}>
-              <img src={"/images/" + item} alt="" className="w-[216px]" />
+            <div className="" key={item + index}>
+              <img src={"/images/malayoga/" + item} alt="" className="w-[216px] object-cover aspect-square" />
             </div>
           );
         })}
@@ -45,9 +45,27 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex gap-6 items-center">
-              <FacebookIcon className='md:hover:fill-orange-500 duration-300 cursor-pointer'/>
-              <InstagramIcon className='md:hover:stroke-orange-500 duration-300 cursor-pointer'/>
-              <YoutubeIcon className='md:hover:stroke-orange-500 duration-300 cursor-pointer'/>
+            <a
+          target="_blank"
+          href="https://www.facebook.com/mala.yoga.studio"
+          rel="noopener noreferrer"
+        >
+          <FacebookIcon className="md:hover:fill-orange-500 duration-300 cursor-pointer -mx-2" />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/mala.yoga.studio?igsh=MTJvcWZienY0emRkOQ=="
+          rel="noopener noreferrer"
+        >
+        <InstagramIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.facebook.com/mala.yoga.studio"
+          rel="noopener noreferrer"
+        >
+        <YoutubeIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
+        </a>
             </div>
           </div>
           <div className="text-center items-center flex flex-row md:flex-col md:gap-4 gap-10 text-[12px]">

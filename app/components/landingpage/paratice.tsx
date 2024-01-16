@@ -48,7 +48,7 @@ const Paratice = async () => {
   };
 
   return (
-    <div className="w-full">
+    <div id="schedules" className="w-full">
       <div className="pb-10 ">
         <div className="overflow-hidden ">
           <Vertical />
@@ -69,33 +69,15 @@ const Paratice = async () => {
         <br className="md:block hidden" /> the classes
         <br className="block md:hidden" /> we have available
       </p>
-      {/* <div className="grid sm:grid-cols-4 grid-cols-2 px-12 justify-center items-center sm:px-[400px] gap-6 mt-20">
-        {choice.map((item: any, index: number) => {
-          return (
-            <div
-              className={
-                "cursor-pointer border-[1px] border-solid text-sm text-orange-400 px-5 py-2 text-center hover:bg-rose-50 duration-300 " +
-                (tabs === index
-                  ? " bg-rose-50 border-rose-50"
-                  : "bg-white border-orange-100")
-              }
-              key={item}
-              onClick={() => setTabs(index)}
-            >
-              <p className=" "> {item}</p>
-            </div>
-          );
-        })}
-      </div> */}
       <div className="mt-10 items-center justify-center md:flex hidden px-10 md:px-20">
         <table className="w-full">
           <thead>
             <tr className="border-[1px] border-secondary border-dashed">
-              {table_header.map((item: any) => {
+              {table_header.map((item: any, index: number) => {
                 return (
                   <th
                     className=" p-6 text-black/70 border-r-[1px] last:border-r-[0px] border-dashed border-secondary font-semibold"
-                    key={item}
+                    key={item + index}
                   >
                     {item}
                   </th>

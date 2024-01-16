@@ -7,7 +7,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const MeetOurExperts = () => {
-  const img = ["yoga-1.jpg", "yoga-2.jpg", "yoga-3.jpg", "yoga-4.jpg"];
+  const img = ["IMG_0349.jpeg", "IMG_0512.jpeg", "IMG_0534.jpeg", "IMG_0673.jpg", "IMG_0777.jpg", "IMG_0804.jpg", "IMG_0857.jpg"];
   const icon = {
     hidden: {
       opacity: 0,
@@ -88,13 +88,13 @@ const MeetOurExperts = () => {
             disableOnInteraction: false,
           }}
         >
-          {img.map((item: any) => {
+          {img.map((item: any, index: number) => {
             return (
-              <SwiperSlide key={item + "hello"} className="">
+              <SwiperSlide key={item + index} className="">
                 <img
-                  src={"/images/" + item}
+                  src={"/images/malayoga/" + item}
                   alt=""
-                  className="h-full w-full"
+                    className="w-full h-[280px] object-cover"
                 />
               </SwiperSlide>
             );

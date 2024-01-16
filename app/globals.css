@@ -87,3 +87,32 @@ body {
 .text-table {
   font-family: "Montserrat", sans-serif;
 }
+
+.truncate-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.truncate-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.truncate-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.truncate-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.bg-overlay {
+  background: linear-gradient(180deg, rgb(24 26 31/70%) 2.73%, rgba(41, 42, 49, 0.2) 31.66%, rgb(24 26 31 / 30%) 54.78%, #181a1f 100%);
+}

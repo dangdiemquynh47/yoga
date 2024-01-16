@@ -16,7 +16,7 @@ const YogaPoses = () => {
     },
   };
   return (
-    <div className="text-center w-full md:px-0 px-10">
+    <div id="investment" className="text-center w-full md:px-0 px-10">
       <div className="-translate-y-[20%]">
         <div className="overflow-hidden ">
           <motion.div

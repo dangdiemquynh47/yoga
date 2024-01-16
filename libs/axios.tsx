@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: process.env.CMS_API_URL || "http://45.119.86.109:8001/",
+  baseURL: process.env.CMS_API_URL || "https://cms.malayoga.vn",
   headers: {
     "Content-Type": "application/json",
     "Cache-Control": "no-store",

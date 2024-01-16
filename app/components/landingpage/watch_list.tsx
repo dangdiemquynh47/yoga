@@ -44,9 +44,9 @@ const WatchList = () => {
             disableOnInteraction: false,
           }}
         >
-          {swiper.map((item: any) => {
+          {swiper.map((item: any, index: number) => {
             return (
-              <SwiperSlide key={item.img + "hello"} className="">
+              <SwiperSlide key={item.img + index} className="">
                 <img
                   src={"/images/malayoga/" + item.img}
                   alt=""

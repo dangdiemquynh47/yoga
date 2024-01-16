@@ -2,10 +2,10 @@ import { MapIcon, PhoneIcon } from "../svg";
 
 const MapStudio = () => {
   return (
-    <div className="grid sm:grid-cols-2 gap-10 justify-between sm:px-40 px-8 w-full">
+    <div id="contact" className="grid sm:grid-cols-2 gap-10 justify-between sm:px-40 px-8 w-full">
       <div className="">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.95197726021914!2d106.68711288677669!3d10.793563027248991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528cf5aa0a06f%3A0xabdf26e118b8256f!2sSendou!5e0!3m2!1svi!2s!4v1705047669253!5m2!1svi!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2315597175016!2d106.6845705751004!3d10.793568889356255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175297c436a271f%3A0x39b460c4c4dab492!2sMala%20Yoga%20Studio!5e0!3m2!1svi!2s!4v1705395396160!5m2!1svi!2s"
           // width={600}
           // height={450}
           style={{ border: 1 }}
