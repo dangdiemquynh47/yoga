@@ -8,7 +8,7 @@ import { renderImageById } from "@/libs/helper";
 import Link from "next/link";
 import { ChevronLeftIcon, ChevronRightIcon } from "../components/svg";
 
-const SlideSlugBlog = ({blog}: any) => {
+const SlideSlugBlog = ({ blog }: any) => {
   const [slide, setSlide] = useState([]);
   const swiper: any = useRef();
   useEffect(() => {
@@ -20,6 +20,7 @@ const SlideSlugBlog = ({blog}: any) => {
       .catch((data) => {});
   }, []);
   const list = (slide || []).filter((item: any) => item.id !== blog.id);
+  console.log(list.length);
 
   return (
     <div className="">
@@ -78,29 +79,28 @@ const SlideSlugBlog = ({blog}: any) => {
             );
           })}
         </Swiper>
-        {list.length !== 5  && <div className="">
-        <div className="absolute -translate-y-[50%] top-[50%] md:left-20 -left-[22px] h-10 z-40">
-          <button
-            className="group md:h-12 md:w-12 w-fit h-fit rounded-full duration-700 hover:border-0 hover:border-primary/80 md:hover:bg-primary/50"
-            onClick={() => swiper.current.swiper.slidePrev()}
-          >
-            <div className="flex items-center justify-center md:-translate-x-[5%]">
-              <ChevronLeftIcon className="md:w-6 md:h-6 w-4 h-4 fill-primary group-hover:fill-white z-50 stroke-[0.1px] items-center" />
-            </div>
-          </button>
+        <div className="">
+          <div className="absolute -translate-y-[50%] top-[50%] md:left-20 -left-[22px] h-10 z-40">
+            <button
+              className="group md:h-12 md:w-12 w-fit h-fit rounded-full duration-700 hover:border-0 hover:border-primary/80 md:hover:bg-primary/50"
+              onClick={() => swiper.current.swiper.slidePrev()}
+            >
+              <div className="flex items-center justify-center md:-translate-x-[5%]">
+                <ChevronLeftIcon className="md:w-6 md:h-6 w-4 h-4 fill-primary md:group-hover:fill-white z-50 stroke-[0.1px] items-center" />
+              </div>
+            </button>
+          </div>
+          <div className="absolute -translate-y-[50%] top-[50%] md:right-20 -right-[22px] h-10 z-40">
+            <button
+              className="group md:h-12 md:w-12 w-fit h-fit rounded-full duration-700 hover:border-0 hover:border-primary/80 md:hover:bg-primary/50"
+              onClick={() => swiper.current.swiper.slideNext()}
+            >
+              <div className="flex items-center justify-center md:translate-x-[5%]">
+                <ChevronRightIcon className="md:w-6 md:h-6 w-4 h-4  fill-primary md:group-hover:fill-white z-50 stroke-[0.1px] items-center" />
+              </div>
+            </button>
+          </div>
         </div>
-        <div className="absolute -translate-y-[50%] top-[50%] md:right-20 -right-[22px] h-10 z-40">
-          <button
-            className="group md:h-12 md:w-12 w-fit h-fit rounded-full duration-700 hover:border-0 hover:border-primary/80 md:hover:bg-primary/50"
-            onClick={() => swiper.current.swiper.slideNext()}
-          >
-            <div className="flex items-center justify-center md:translate-x-[5%]">
-              <ChevronRightIcon className="md:w-6 md:h-6 w-4 h-4  fill-primary group-hover:fill-white z-50 stroke-[0.1px] items-center" />
-            </div>
-          </button>
-        </div>
-        </div>}
-        
       </div>
     </div>
   );
