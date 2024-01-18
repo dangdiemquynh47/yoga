@@ -42,7 +42,7 @@ const Blog = async () => {
                   <img
                     src={renderImageById(item.thumbnail)}
                     alt=""
-                    className="duration-300 scale-105 hover:scale-100 h-full w-full object-cover"
+                    className="duration-300 scale-105 hover:scale-100 aspect-[2/3] w-full object-cover"
                   />
                 </div>
                 <Link href={href}>
