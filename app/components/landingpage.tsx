@@ -11,7 +11,7 @@ import Blog from "./landingpage/blog";
 const LandingPage = () => {
   return (
     <div className="w-full">
-      <div className="pt-10 bg-be/20">
+      {/* <div className="pt-10 bg-be/20">
         <WatchList />
       </div>
       <div className="mb-10">
@@ -19,19 +19,19 @@ const LandingPage = () => {
       </div>
       <div className="mt-20">
         <HelpConfident />
-      </div>
+      </div> */}
       <div className="mt-40">
         <Paratice />
       </div>
-      <div className="">
+      {/* <div className="">
         <Video />
-      </div>
+      </div> */}
       {/* <div className="pt-10">
         <Experts />
       </div> */}
-      <div className="mt-20">
+      {/* <div className="mt-20">
         <Blog />
-      </div>
+      </div> */}
       <div className="-translate-y-[10%] pb-40">
         <Inspirational />
       </div>

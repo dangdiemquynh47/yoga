@@ -33,7 +33,7 @@ const Blog = async () => {
                   "w-full h-full flex flex-col items-center justify-center " +
                   (active && "md:translate-y-20 ")
                 }
-                key={item.smallimg + index}
+                key={item.description + index}
               >
                 <p className="w-fit px-5 text-orange-500 translate-y-[50%] z-10 py-1 bg-white">
                   {dayjs(item.date_created).format("DD/MM/YYYY")}

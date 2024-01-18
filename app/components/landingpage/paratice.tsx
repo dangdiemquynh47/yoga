@@ -171,7 +171,7 @@ const Paratice = async () => {
 
                 const timeShiftInClass = time_shift.data.find((t:any)=> t.id === classAcitve.time_shift)
                  return (
-                  <div className="flex border-b-[1px] py-2 border-solid">
+                  <div className="flex border-b-[1px] py-2 border-solid" key={item + index}>
                     <div className=" text-primary">
                       {classAcitve?.title}
                     </div>
