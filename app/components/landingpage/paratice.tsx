@@ -160,7 +160,7 @@ const Paratice = async () => {
           const day = days[index];
        
           return (
-            <div className="">
+            <div className="" key={item + index}>
               <p className="pt-10">{item}</p>
               {list.map((item: any, index: number) => {
                 const classAcitve = classes.find(
@@ -171,7 +171,7 @@ const Paratice = async () => {
 
                 const timeShiftInClass = time_shift.data.find((t:any)=> t.id === classAcitve.time_shift)
                  return (
-                  <div className="flex border-b-[1px] py-2 border-solid" key={item + index}>
+                  <div className="flex border-b-[1px] py-2 border-solid" key={item.start_time + index}>
                     <div className=" text-primary">
                       {classAcitve?.title}
                     </div>
