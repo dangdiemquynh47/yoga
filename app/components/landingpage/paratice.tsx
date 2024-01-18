@@ -175,7 +175,7 @@ const Paratice = async () => {
                     <div className=" text-primary">
                       {classAcitve?.title}
                     </div>
-                    <div className="ml-auto">
+                    <div className="ml-auto text-primary">
                     {timeShiftInClass.start_time.slice(0, 5) } - { timeShiftInClass.end_time.slice(0,5) }
                     </div>
                   </div>
