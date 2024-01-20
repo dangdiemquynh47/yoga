@@ -4,7 +4,7 @@ import { StarIcon } from "../svg";
 import React from "react";
 import { motion } from "framer-motion";
 
-const YogaPoses = () => {
+const Classes = () => {
   const icon = {
     hidden: {
       opacity: 0,
@@ -16,7 +16,7 @@ const YogaPoses = () => {
     },
   };
   return (
-    <div id="investment" className="text-center w-full md:px-0 px-10">
+    <div id="classes" className="text-center w-full md:px-0 px-10">
       <div className="-translate-y-[20%]">
         <div className="overflow-hidden ">
           <motion.div
@@ -40,29 +40,29 @@ const YogaPoses = () => {
         />
       </div>
       <p className="text-4xl text-title">
-        A joyfull <span className="italic text-primary font-bold">investment</span> in
+        A joyfull <span className="italic text-primary font-bold">classes</span> in
         your body, <br /> mind and spirit
       </p>
       <div className="group flex flex-col sm:flex-row md:gap-20 gap-10 items-center justify-center mt-12 text-2xl text-title">
         <div className="">
           <PowerYogaIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer" />
-          <p className="md:mt-6 mt-3">Power Yoga</p>
+          <p className="md:mt-6 mt-3">Hatha Yoga</p>
         </div>
         <div className="">
           <YogaScultIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer" />
-          <p className="md:mt-6 mt-3">Yoga Sculpt</p>
+          <p className="md:mt-6 mt-3">Yin & Restorative </p>
         </div>
         <div className="">
           <HotYogaIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer " />
-          <p className="md:mt-6 mt-3">Hot Yoga</p>
+          <p className="md:mt-6 mt-3">Pranayama & Meditation </p>
         </div>
         <div className="">
           <HathaYoga className="fill-[#F47730]  hover:fill-[#4054B2] duration-300 cursor-pointer" />
-          <p className="md:mt-6 mt-3">Hatha Yoga</p>
+          <p className="md:mt-6 mt-3">Therapeutic</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default YogaPoses;
+export default Classes;

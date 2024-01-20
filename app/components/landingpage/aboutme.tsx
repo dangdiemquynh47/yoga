@@ -1,4 +1,4 @@
-const HelpConfident = () => {
+const AboutMe = () => {
   const list = [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     "Sed do eiumdod tempor incididunt ut labore",
@@ -37,4 +37,4 @@ const HelpConfident = () => {
   );
 };
 
-export default HelpConfident;
+export default AboutMe;

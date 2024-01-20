@@ -6,7 +6,7 @@ import { StarIcon } from "../svg";
 import React from "react";
 import { motion } from "framer-motion";
 
-const Inspirational = () => {
+const Feedback = () => {
   const icon = {
     hidden: {
       opacity: 0,
@@ -142,4 +142,4 @@ const Inspirational = () => {
   );
 };
 
-export default Inspirational;
+export default Feedback;

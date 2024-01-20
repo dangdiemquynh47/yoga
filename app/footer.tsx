@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FacebookIcon, InstagramIcon, YoutubeIcon } from "./components/svg";
 
 const Footer = () => {
@@ -22,13 +23,13 @@ const Footer = () => {
       </div>
       <div className="bg-[#fbf5e8] sm:px-[250px] pb-[120px] pt-[240px] w-full">
         <div className="items-center flex justify-center pb-10">
-          <img src="/images/logo-remove-bg.png" alt="" className="w-20 h-20" />
+          <Link href={"/"}><img src="/images/logo-remove-bg.png" alt="" className="w-20 h-20" /></Link>
         </div>
         <div className="flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center">
           <div className="md:order-first order-1 flex flex-row md:flex-col text-center items-center md:gap-4 gap-10 text-[12px]">
-            <p className="hover:text-orange-500 cursor-pointer">HOME</p>
-            <p className="hover:text-orange-500 cursor-pointer">ABOUT ME</p>
-            <p className="hover:text-orange-500 cursor-pointer">CONTACT</p>
+            <Link href={"#home"}><p className="hover:text-orange-500 cursor-pointer duration-300">HOME</p></Link>
+            <Link href={"#classes"}><p id=" " className="hover:text-orange-500 cursor-pointer duration-300">CLASSES</p></Link> 
+            <Link href={"#aboutme"}><p id="aboutme" className="hover:text-orange-500 cursor-pointer duration-300">ABOUT ME</p></Link> 
           </div>
           <div className="items-center flex flex-col gap-8 ">
             <p className="md:text-3xl text-2xl text-title">Subsrcibe to our newsletter</p>
@@ -69,9 +70,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-center items-center flex flex-row md:flex-col md:gap-4 gap-10 text-[12px]">
-            <p className="hover:text-orange-500 cursor-pointer">CLASSES</p>
-            <p className="hover:text-orange-500 cursor-pointer">BLOG</p>
-            <p className="hover:text-orange-500 cursor-pointer">LANDING</p>
+            
+            <Link href={"#schedules"}><p className="hover:text-orange-500 cursor-pointer uppercase duration-300">Schedules</p></Link>
+            <Link href={"#blogs"}><p className="hover:text-orange-500 cursor-pointer uppercase duration-300">Blogs</p></Link>
+            <Link href={"#contact"}><p className="hover:text-orange-500 cursor-pointer uppercase duration-300">Contact Us</p></Link>
           </div>
         </div>
       </div>

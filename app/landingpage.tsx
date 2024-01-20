@@ -1,12 +1,12 @@
 "use client";
-import YogaPoses from "./components/landingpage/yoga_poses";
-import HelpConfident from "./components/landingpage/helpconfident";
+import YogaPoses from "./components/landingpage/classes";
+import HelpConfident from "./components/landingpage/aboutme";
 import Experts from "./components/landingpage/experts";
-import Inspirational from "./components/landingpage/inspirational";
-import WatchList from "./components/landingpage/watch_list";
+import Inspirational from "./components/landingpage/feedback";
+import WatchList from "./components/landingpage/banner";
 import MeetOurExperts from "./components/landingpage/meetourexperts";
 import MapStudio from "./components/landingpage/map";
-import Paratice from "./components/landingpage/paratice";
+import Paratice from "./components/landingpage/schedules";
 import Video from "./components/landingpage/video";
 import Blog from "./components/landingpage/blog";
 

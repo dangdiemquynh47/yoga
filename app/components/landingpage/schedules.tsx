@@ -5,7 +5,7 @@ import { axiosInstance } from "@/libs/axios";
 import dayjs from "dayjs";
 import Vertical from "../wigdet/vertical";
 
-const Paratice = async () => {
+const Schedules = async () => {
   const time_shift: any = await axiosInstance
     .get(`/items/time_shift?fields=*`)
     .catch((data) => {});
@@ -189,5 +189,5 @@ const Paratice = async () => {
   );
 };
 
-export default Paratice;
+export default Schedules;
 

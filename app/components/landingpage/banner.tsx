@@ -3,10 +3,10 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const WatchList = () => {
+const Banner = () => {
   const swiper = [
-    { img: "IMG_0547.jpg", text: "Body and Mind" },
     { img: "IMG_0541-2.jpg", text: "New Yoga Classes" },
+    { img: "IMG_0857.jpg", text: "Body and Mind" },
     { img: "IMG_0569-2.jpg", text: "Group Sessions" },
     { img: "IMG_0561-2.jpg", text: "Your Happy Place" },
   ];
@@ -53,14 +53,14 @@ const WatchList = () => {
                   className="md:h-[80vh] md:w-full"
                 />
                 <div className="flex flex-col gap-6 absolute md:text-7xl text-4xl text-white md:bottom-10 md:left-10 bottom-6 left-6 ">
-                  <p className="text-title">{item.text}</p>
-                  <div className="cursor-pointer group flex items-center justify-center gap-2 md:py-4 py-1 h-fit bg-button w-fit overflow-hidden">
+                  <p className="text-title pb-10">{item.text}</p>
+                  {/* <div className="cursor-pointer group flex items-center justify-center gap-2 md:py-4 py-1 h-fit bg-button w-fit overflow-hidden">
                     <div className="h-[1px] w-6 group-hover:-translate-x-[14px] duration-300 bg-white"></div>
                     <button className="text-white text-[12px]">
                       BOOK NOW
                     </button>
                     <div className="h-[1px] w-6 group-hover:translate-x-[14px] duration-300 bg-white"></div>
-                  </div>
+                  </div> */}
                 </div>
               </SwiperSlide>
             );
@@ -71,4 +71,4 @@ const WatchList = () => {
   );
 };
 
-export default WatchList;
+export default Banner;
