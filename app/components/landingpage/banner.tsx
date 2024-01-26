@@ -50,7 +50,7 @@ const Banner = () => {
                 <img
                   src={"/images/malayoga/" + item.img}
                   alt=""
-                  className="md:h-[80vh] md:w-full"
+                  className="lg:h-[80vh] md:h-[50vh] md:w-full object-cover"
                 />
                 <div className="flex flex-col gap-6 absolute md:text-7xl text-4xl text-white md:bottom-10 md:left-10 bottom-6 left-6 ">
                   <p className="text-title pb-10">{item.text}</p>

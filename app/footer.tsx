@@ -21,7 +21,7 @@ const Footer = () => {
           );
         })}
       </div>
-      <div className="bg-[#fbf5e8] sm:px-[250px] pb-[120px] pt-[240px] w-full">
+      <div className="bg-[#fbf5e8] lg:px-[250px] sm:px-10 pb-[120px] pt-[240px] w-full">
         <div className="items-center flex justify-center pb-10">
           <Link href={"/"}><img src="/images/logo-remove-bg.png" alt="" className="w-20 h-20" /></Link>
         </div>

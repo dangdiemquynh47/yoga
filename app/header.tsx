@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <div
       id="home"
-      className="w-full md:h-[103px] h-fit py-2.5 md:px-[82px] sticky top-0 z-50 shadow-md px-4 bg-[#fedfcd] text-black flex flex-row items-center justify-between"
+      className="w-full md:h-[103px] h-fit py-2.5 lg:px-[82px] md:px-8 sticky top-0 z-50 shadow-md px-4 bg-[#fedfcd] text-black flex flex-row items-center justify-between"
     >
       <div className="flex-none">
         <div className="md:flex hidden gap-4 items-center justify-center">
@@ -52,7 +52,7 @@ const Header = () => {
           </a>
         </div>
       </div>
-      <div className="md:grid md:grid-cols-7 px-28 grow hidden items-center justify-center">
+      <div className="md:grid md:grid-cols-7 lg:px-28 md:px-2 grow hidden items-center justify-center">
         {menu.map((item: any) => {
           return (
             <Link href={item.url} key={item.title}>

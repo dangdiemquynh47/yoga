@@ -9,7 +9,7 @@ const Blog = async () => {
   const list = blog.data || [];
 
   return (
-    <div id="blogs" className="md:p-40 pt-20 pb-60 px-8 bg-[#fbf5e8] w-full relative">
+    <div id="blogs" className="lg:p-40 md:px-10 md:py-40 px-4 pt-20 pb-60 bg-[#fbf5e8] w-full relative">
       <div className="pb-10 absolute top-0 left-[50%] md:-translate-y-[25%] -translate-y-[50%] -translate-x-[50%] md:-translate-x-[0]">
         <Star />
       </div>
@@ -22,7 +22,7 @@ const Blog = async () => {
         more <br className="hidden md:block" /> about our{" "}
         <br className="md:hidden block" /> community
       </p>
-      <div className="grid sm:grid-cols-3 grid-cols-1 md:gap-x-16 gap-x-20 pt-10">
+      <div className="grid sm:grid-cols-3 grid-cols-1 lg:gap-x-16 md:gap-x-6 lg:gap-x-20 pt-10">
         {list.map((item: any, index: number) => {
           const href = `/blogs/${item.slug}`;
           const position = (index + 1) % 3 
