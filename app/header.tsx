@@ -25,32 +25,34 @@ const Header = () => {
   return (
     <div
       id="home"
-      className="w-full md:h-[103px] h-fit py-2.5 md:px-[82px] sticky top-0 z-50 shadow-md px-4 bg-[#fedfcd] text-black flex items-center justify-between"
+      className="w-full md:h-[103px] h-fit py-2.5 md:px-[82px] sticky top-0 z-50 shadow-md px-4 bg-[#fedfcd] text-black flex flex-row items-center justify-between"
     >
-      <div className="md:flex hidden gap-4 items-center justify-center">
-        <a
-          target="_blank"
-          href="https://www.facebook.com/mala.yoga.studio"
-          rel="noopener noreferrer"
-        >
-          <FacebookIcon className="md:hover:fill-orange-500 duration-300 cursor-pointer -mx-2" />
-        </a>
-        <a
-          target="_blank"
-          href="https://www.instagram.com/mala.yoga.studio?igsh=MTJvcWZienY0emRkOQ=="
-          rel="noopener noreferrer"
-        >
-        <InstagramIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
-        </a>
-        <a
-          target="_blank"
-          href="https://www.facebook.com/mala.yoga.studio"
-          rel="noopener noreferrer"
-        >
-        <YoutubeIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
-        </a>
+      <div className="flex-none">
+        <div className="md:flex hidden gap-4 items-center justify-center">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/mala.yoga.studio"
+            rel="noopener noreferrer"
+          >
+            <FacebookIcon className="md:hover:fill-orange-500 duration-300 cursor-pointer -mx-2" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/mala.yoga.studio?igsh=MTJvcWZienY0emRkOQ=="
+            rel="noopener noreferrer"
+          >
+            <InstagramIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/mala.yoga.studio"
+            rel="noopener noreferrer"
+          >
+            <YoutubeIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
+          </a>
+        </div>
       </div>
-      <div className="md:flex hidden gap-10 items-center justify-center">
+      <div className="md:grid md:grid-cols-7 px-28 grow hidden items-center justify-center">
         {menu.map((item: any) => {
           return (
             <Link href={item.url} key={item.title}>
@@ -62,13 +64,17 @@ const Header = () => {
                 onClick={() => setHeader(item.title)}
               >
                 {item.title === "logo" ? (
-                  <img
-                    src="/images/logo-remove-bg.png"
-                    alt=""
-                    className="w-[69px] h-[69px]"
-                  />
+                  <div className="w-full flex items-center justify-center">
+                    <img
+                      src="/images/logo-remove-bg.png"
+                      alt=""
+                      className="w-[69px] h-[69px]"
+                    />
+                  </div>
                 ) : (
-                  item.title
+                  <p className="w-full flex items-center justify-center">
+                    {item.title}
+                  </p>
                 )}
               </div>
             </Link>
@@ -77,20 +83,22 @@ const Header = () => {
       </div>
 
       <Link href={"/"}>
-      <div className="md:hidden block">
-        <img
-          src="/images/logo-remove-bg.png"
-          alt=""
-          className="w-[50px] h-[50px]"
-        />
-      </div>
+        <div className="md:hidden block">
+          <img
+            src="/images/logo-remove-bg.png"
+            alt=""
+            className="w-[50px] h-[50px]"
+          />
+        </div>
       </Link>
 
-      <div className="flex gap-4 items-center justify-end min-w-[120px]">
-        <SearchIcon className=" md:hover:stroke-orange-500 stroke-black duration-300 cursor-pointer" />
+     <div className="flex-none w-[104px]">
+     <div className="flex gap-4 items-center justify-end min-w-[120px]">
+        {/* <SearchIcon className=" md:hover:stroke-orange-500 stroke-black duration-300 cursor-pointer" /> */}
         {/* <CartIcon className='md:block hidden md:hover:stroke-orange-500 stroke-black duration-300 cursor-pointer'/>
         <MenuIcon className='md:hover:fill-orange-500  fill-black duration-300 cursor-pointer'/> */}
       </div>
+     </div>
     </div>
   );
 };

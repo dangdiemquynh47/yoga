@@ -27,7 +27,7 @@ const LandingPage = () => {
       {/* <div className="pt-10">
         <Experts />
       </div> */}
-      <div className="mt-20">
+      <div className="mt-20 mb-80">
         <Blog />
       </div>
       {/* <div className="-translate-y-[10%] pb-40">

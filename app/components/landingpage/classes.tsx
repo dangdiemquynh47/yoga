@@ -1,5 +1,11 @@
 "use client";
-import { HathaYoga, HotYogaIcon, PowerYogaIcon, YogaScultIcon } from "../svg";
+import {
+  HathaYogaIcon,
+  PowerYogaIcon,
+  Pra_MediIcon,
+  TherapeuticIcon,
+  YinIcon,
+} from "../svg";
 import { StarIcon } from "../svg";
 import React from "react";
 import { motion } from "framer-motion";
@@ -15,6 +21,33 @@ const Classes = () => {
       pathLength: 1,
     },
   };
+
+  const classes = [
+    {
+      icon: (
+        <HathaYogaIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer" />
+      ),
+      name: "Hatha Yoga",
+    },
+    {
+      icon: (
+        <YinIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer" />
+      ),
+      name: "Yin & Restorative",
+    },
+    {
+      icon: (
+        <Pra_MediIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer" />
+      ),
+      name: "Pranayama & Meditation",
+    },
+    {
+      icon: (
+        <TherapeuticIcon className="fill-[#F47730] W-[50%]  duration-300 cursor-pointer" />
+      ),
+      name: "Therapeutic",
+    },
+  ];
   return (
     <div id="classes" className="text-center w-full md:px-0 px-10">
       <div className="-translate-y-[20%]">
@@ -40,26 +73,37 @@ const Classes = () => {
         />
       </div>
       <p className="text-4xl text-title">
-        A joyfull <span className="italic text-primary font-bold">classes</span> in
-        your body, <br /> mind and spirit
+        A joyfull <span className="italic text-primary font-bold">classes</span>{" "}
+        in your body, <br /> mind and spirit
       </p>
-      <div className="group flex flex-col sm:flex-row md:gap-20 gap-10 items-center justify-center mt-12 text-2xl text-title">
-        <div className="">
+      {/* <div className="group flex flex-col md:grid md:grid-cols-4 md:px-28  gap-10 items-center justify-center mt-12 text-2xl text-title">
+        <div className="flex flex-col items-center justify-center">
           <PowerYogaIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer" />
           <p className="md:mt-6 mt-3">Hatha Yoga</p>
         </div>
-        <div className="">
+        <div className="flex flex-col items-center justify-center">
           <YogaScultIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer" />
           <p className="md:mt-6 mt-3">Yin & Restorative </p>
         </div>
-        <div className="">
+        <div className="flex flex-col items-center justify-center">
           <HotYogaIcon className="fill-[#F47730] hover:fill-[#4054B2] duration-300 cursor-pointer " />
           <p className="md:mt-6 mt-3">Pranayama & Meditation </p>
         </div>
-        <div className="">
+        <div className="flex flex-col items-center justify-center">
           <HathaYoga className="fill-[#F47730]  hover:fill-[#4054B2] duration-300 cursor-pointer" />
           <p className="md:mt-6 mt-3">Therapeutic</p>
         </div>
+      </div> */}
+
+      <div className="group flex flex-col md:grid md:grid-cols-4 md:px-28  gap-10 items-center justify-center mt-12 text-2xl text-title">
+        {classes.map((item: any, index: number) => {
+          return (
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[59%]">{item.icon}</div>
+              <p className="md:mt-6 mt-3">{item.name}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
