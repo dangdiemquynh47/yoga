@@ -17,15 +17,15 @@ const AboutMe = () => {
         to help <br /> you find the confidence you need to feel <br />{" "}
         <span className="italic text-primary font-bold">amazing</span> in your
         body!  */}
-          I am Hien Thi - Yoga Instructor - Founder of MalaYoga
+          I am Hien Thi - Yoga Instructor <br /> Founder of MalaYoga
         </p>
       </div>
       <div className="">
-        <p className="text-table w-[40%] text-md">
-          If you're here and read a little about me, I believe the universe is
+        <p className="text-table w-[40%] text-md min-h-[300px]">
+          If you`re here and read a little about me, I believe the universe is
           connecting us Surely you are also a Yogi/Yogini or the universe has
           sent a signal for you to touch your finger to touch Yoga Hope my
-          sharing will help you in this journey Namaste 🙏🏼
+          sharing will help you in this journey Namaste
         </p>
       </div>
 
