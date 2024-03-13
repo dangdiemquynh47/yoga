@@ -4,7 +4,7 @@ import LandingPage from "./components/landingpage";
 export const metadata: Metadata = {
   title: "Mala Yoga",
   description:
-    "If you`re here and read a little about me, I believe the universe is connecting us Surely you are also a Yogi/Yogini or the universe has sent a signal for you to touch your finger to touch Yoga Hope my sharing will help you in this journey Namaste",
+    "Discover balance, strength, and peace through mindful movement and breathwork with me!",
   metadataBase: new URL("https://malayoga.vn"),
   openGraph: {
     title: "Mala Yoga",
