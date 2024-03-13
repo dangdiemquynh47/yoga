@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     openGraph: {
       title: "Mala Yoga",
       description: "",
-      url: "https://malayoga.vn/",
+      url: "https://malayoga.vn",
       type: "website",
       locale: "vi_VN",
       siteName: "MALA YOGA",
