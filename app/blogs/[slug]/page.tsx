@@ -39,3 +39,17 @@ export default async function Home({ params }: any) {
     </div>
   );
 }
+
+export async function generateMetadata({ params }: any) {
+  const title = "Blog - slug";
+  const des = "Des";
+  return {
+    title: title,
+    description: des,
+    openGraph: {
+      title: title,
+      description: des,
+      images: ["/images/malayoga/IMG_0802.jpg"],
+    },
+  };
+}

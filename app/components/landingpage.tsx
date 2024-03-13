@@ -6,6 +6,30 @@ import Schedules from "./landingpage/schedules";
 import AboutMe from "./landingpage/aboutme";
 import Classes from "./landingpage/classes";
 import Banner from "./landingpage/banner";
+import { Metadata } from "next";
+
+export const DOMAIN = "https://malayoga.vn/";
+
+export const metadata: Metadata = {
+  title: "Mala Yoga",
+  description:
+    "If you`re here and read a little about me, I believe the universe is connecting us Surely you are also a Yogi/Yogini or the universe has sent a signal for you to touch your finger to touch Yoga Hope my sharing will help you in this journey Namaste",
+    openGraph: {
+      title: "Mala Yoga",
+      description: "",
+      url: DOMAIN,
+      type: "website",
+      locale: "vi_VN",
+      siteName: "MALA YOGA",
+      images: [
+        {
+          url: "/images/malayoga/IMG_0802.jpg",
+          alt: "Mala Yoga",
+        },
+      ],
+    },
+  
+};
 const LandingPage = () => {
   return (
     <div className="w-full">
