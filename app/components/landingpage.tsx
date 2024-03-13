@@ -6,7 +6,6 @@ import Schedules from "./landingpage/schedules";
 import AboutMe from "./landingpage/aboutme";
 import Classes from "./landingpage/classes";
 import Banner from "./landingpage/banner";
-import { Metadata } from "next";
 
 const LandingPage = () => {
   return (

@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import LandingPage from "./components/landingpage";
 
-export const DOMAIN = "https://malayoga.vn/";
-
 export const metadata: Metadata = {
   title: "Mala Yoga",
   description:
@@ -10,7 +8,7 @@ export const metadata: Metadata = {
     openGraph: {
       title: "Mala Yoga",
       description: "",
-      url: DOMAIN,
+      url: "https://malayoga.vn/",
       type: "website",
       locale: "vi_VN",
       siteName: "MALA YOGA",
@@ -30,3 +28,6 @@ export default function Home() {
     </main>
   );
 }
+
+// export const revalidate = 60;
+// 
