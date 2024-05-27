@@ -20,7 +20,7 @@ const SlideSlugBlog = ({ blog }: any) => {
       .catch((data) => {});
   }, []);
   const list = (slide || []).filter((item: any) => item.id !== blog.id);
-  console.log(list.length);
+  // console.log(list.length);
 
   return (
     <div className="">

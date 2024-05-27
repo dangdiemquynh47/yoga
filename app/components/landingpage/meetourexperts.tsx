@@ -5,9 +5,18 @@ import "swiper/css";
 import { StarIcon } from "../svg";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const MeetOurExperts = () => {
-  const img = ["IMG_0349.jpeg", "IMG_0512.jpeg", "IMG_0534.jpeg", "IMG_0673.jpg", "IMG_0777.jpg", "IMG_0804.jpg", "IMG_0857.jpg"];
+  const img = [
+    "IMG_0349.jpeg",
+    "IMG_0512.jpeg",
+    "IMG_0534.jpeg",
+    "IMG_0673.jpg",
+    "IMG_0777.jpg",
+    "IMG_0804.jpg",
+    "IMG_0857.jpg",
+  ];
   const icon = {
     hidden: {
       opacity: 0,
@@ -20,7 +29,7 @@ const MeetOurExperts = () => {
   };
   return (
     <div className=" bg-[#fbf5e8] w-full px-8 ">
-       <div className=" -translate-y-[30%]">
+      <div className=" -translate-y-[30%]">
         <div className="overflow-hidden ">
           <motion.div
             // initial=" hidden"
@@ -91,11 +100,19 @@ const MeetOurExperts = () => {
           {img.map((item: any, index: number) => {
             return (
               <SwiperSlide key={item + index} className="">
-                <img
+                {/* <img
                   src={"/images/malayoga/" + item}
                   alt=""
-                    className="w-full h-[280px] object-cover"
-                />
+                  className="w-full h-[280px] object-cover"
+                /> */}
+                  <Image
+                    src={"/images/malayoga/" + item}
+                    alt="img"
+                    height={280}
+                    width={400}
+                    unoptimized
+                    className="w-full h-[300px] object-cover"
+                  />
               </SwiperSlide>
             );
           })}

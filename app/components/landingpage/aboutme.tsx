@@ -23,9 +23,9 @@ const AboutMe = () => {
       <div className="">
         <p className="text-table w-[40%] text-md min-h-[300px]">
           If you`re here and read a little about me, I believe the universe is
-          connecting us Surely you are also a Yogi/Yogini or the universe has
-          sent a signal for you to touch your finger to touch Yoga Hope my
-          sharing will help you in this journey Namaste
+          connecting us. Surely you are also a Yogi/Yogini or the universe has
+          sent a signal for you to touch your finger to touch Yoga. Hope my
+          sharing will help you in this journey. Namaste!
         </p>
       </div>
 

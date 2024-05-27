@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <div
       id="home"
-      className="w-full md:h-[103px] h-fit py-2.5 lg:px-[82px] md:px-8 sticky top-0 z-50 shadow-md px-4 bg-[#fedfcd] text-black flex flex-row items-center justify-between"
+      className="mx-auto w-full md:h-[80px] h-fit lg:px-[82px] md:px-8 sticky top-0 z-50 shadow-md px-4 bg-[#fedfcd] text-black flex flex-row items-center justify-between"
     >
       <div className="flex-none">
         <div className="md:flex hidden gap-4 items-center justify-center">
@@ -58,7 +58,7 @@ const Header = () => {
             <Link href={item.url} key={item.title}>
               <div
                 className={
-                  "cursor-pointer text-[20px] duration-300 text-title italic hover:text-primary text-bold" +
+                  "cursor-pointer lg:text-[20px] duration-300 text-title italic hover:text-primary text-bold" +
                   (item.title === header ? "text-header" : "")
                 }
                 onClick={() => setHeader(item.title)}
