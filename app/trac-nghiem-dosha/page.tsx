@@ -257,8 +257,8 @@ const Page = () => {
       name_question: "TRÍ NHỚ",
       listquestion: [
         { value: "A", label: "A. Nhanh, dễ quên  " },
-        { value: "A", label: "B. Sâu sắc, rõ ràng " },
-        { value: "A", label: "C. Chậm nhưng ổn định " },
+        { value: "B", label: "B. Sâu sắc, rõ ràng " },
+        { value: "C", label: "C. Chậm nhưng ổn định " },
       ],
     },
     {

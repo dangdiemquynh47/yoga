@@ -102,7 +102,7 @@ export function RadioGroupForm({ questions, totalQuestion }: any) {
                       {list_question.map((item: any, i: number) => {
                         return (
                           <FormItem
-                            className="flex items-center space-x-3 space-y-0 rounded-r-[32px]  pb-4 pt-5 px-5 w-fit rounded-tl-[32px] border-[1px] border-secondary/40 border-solid"
+                            className="flex items-center space-x-3 space-y-0 rounded-r-[32px] pb-4 pt-5 px-5 w-fit rounded-tl-[32px] border-[1px] border-secondary/40 border-solid"
                             key={item.value + "item"}
                           >
                             <FormControl>
