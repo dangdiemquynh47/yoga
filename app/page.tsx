@@ -3,19 +3,20 @@ import LandingPage from "./components/landingpage";
 
 export const metadata: Metadata = {
   title: "Mala Yoga",
-  description:
-    "Discover balance, strength, and peace through mindful movement and breathwork with me!",
+  description: "Discover balance, strength, and peace through mindful movement and breathwork with me!",
   metadataBase: new URL("https://malayoga.vn"),
+  keywords:
+    "Trắc nghiệm dosha, malayoga, Mala Yoga, Yoga Mala",
   openGraph: {
     title: "Mala Yoga",
-    description: "",
+    description: "Discover balance, strength, and peace through mindful movement and breathwork with me!",
     url: "https://malayoga.vn",
     type: "website",
     locale: "vi_VN",
-    siteName: "MALA YOGA",
+    siteName: "Mala Yoga",
     images: [
       {
-        url: "/images/malayoga/IMG_0802.jpg",
+        url: "/images/malayoga/IMG_0857.jpg",
         alt: "Mala Yoga",
       },
     ],
