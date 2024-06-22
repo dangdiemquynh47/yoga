@@ -59,7 +59,7 @@ export function RadioGroupForm({ questions, totalQuestion }: any) {
     return newCount;
   };
 
-  const onSubmit = async (index: number) => {
+  const onSubmit = async () => {
     const values = form.getValues();
     const answer = values["answer_" + (stt + 1)];
     if (!answer) {
@@ -74,135 +74,132 @@ export function RadioGroupForm({ questions, totalQuestion }: any) {
   };
 
   return (
-    <div className="">
-      <Form {...form}>
-        <form className=" space-y-6">
-          {questions.map((items: any, index: number) => {
-            const list_question = items.listquestion;
-            const nameQuestion = items.name_question;
-            const id = items.id;
+    <Form {...form}>
+      <form className=" space-y-6">
+        {questions.map((items: any, index: number) => {
+          const list_question = items.listquestion;
+          const nameQuestion = items.name_question;
+          const id = items.id;
 
-            if (stt !== index) return null;
-            return (
-              <FormField
-                control={form.control}
-                name={("answer_" + (index + 1)) as any}
-                key={items + index}
-                render={({ field }) => (
-                  <FormItem className="space-y-3">
-                    <FormLabel>
-                      Câu hỏi số{" "}
-                      <span className="text-secondary">{stt + 1}</span>/
-                      {totalQuestion}
-                      <br />
-                      <div className="bg-secondary text-white pb-4 pt-5 px-5 w-fit rounded-r-[32px] rounded-tl-[32px] my-5">
-                        {nameQuestion}
-                      </div>
-                    </FormLabel>
-                    <FormControl>
-                      <RadioGroup
-                        onValueChange={field.onChange}
-                        value={field.value}
-                        defaultValue={field.value}
-                        className="flex flex-col space-y-1"
-                      >
-                        {list_question.map((item: any, i: number) => {
-                          return (
-                            <FormItem
-                              className="flex items-center space-x-3 space-y-0 rounded-r-[32px] pb-4 pt-5 px-5 w-fit rounded-tl-[32px] border-[1px] border-secondary/40 border-solid"
-                              key={item.value + "item"}
+          if (stt !== index) return null;
+          return (
+            <FormField
+              control={form.control}
+              name={("answer_" + (index + 1)) as any}
+              key={items + index}
+              render={({ field }) => (
+                <FormItem className="space-y-3">
+                  <FormLabel>
+                    Câu hỏi số <span className="text-secondary">{stt + 1}</span>
+                    /{totalQuestion}
+                    <br />
+                    <div className="bg-secondary text-white pb-4 pt-5 px-5 w-fit rounded-r-[32px] rounded-tl-[32px] my-5">
+                      {nameQuestion}
+                    </div>
+                  </FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={field.onChange}
+                      value={field.value}
+                      defaultValue={field.value}
+                      className="flex flex-col space-y-1"
+                    >
+                      {list_question.map((item: any, i: number) => {
+                        return (
+                          <FormItem
+                            className="flex items-center space-x-3 space-y-0 rounded-r-[32px] pb-4 pt-5 px-5 w-fit rounded-tl-[32px] border-[1px] border-secondary/40 border-solid"
+                            key={item.value + "item"}
+                          >
+                            <FormControl>
+                              <RadioGroupItem value={item.value} />
+                            </FormControl>
+                            <FormLabel
+                              htmlFor={item.value + i}
+                              className="!mt-1 !leading-5"
                             >
-                              <FormControl>
-                                <RadioGroupItem value={item.value} />
-                              </FormControl>
-                              <FormLabel
-                                htmlFor={item.value + i}
-                                className="!mt-1 !leading-5"
-                              >
-                                {item.label}
-                              </FormLabel>
-                            </FormItem>
-                          );
-                        })}
-                      </RadioGroup>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            );
-          })}
-          <div
-            className={
-              "" +
-              (stt + 1 > totalQuestion.props.children &&
-                "flex flex-col gap-8 items-center justify-center")
-            }
-          >
-            {stt + 1 > totalQuestion.props.children && (
-              <p className="text-primary text-3xl font-semibold">
-                Chúc mừng bạn vừa hoàn thành xong bài test của Malayoga nha ^^.
-              </p>
-            )}
-            <div className="flex gap-6">
-              <Button
-                type="button"
-                onClick={() => setSTT(stt - 1)}
-                className={
-                  "bg-secondary text-white " +
-                  (appear && "hidden") +
-                  (stt === 0 && " hidden")
-                }
-              >
-                Quay lại câu trước
-              </Button>
-              <Button
-                type="button"
-                onClick={onSubmit}
-                className={"bg-secondary text-white " + (appear && "hidden")}
-              >
-                {stt + 1 > totalQuestion.props.children
-                  ? "Xem kết quá"
-                  : "Qua câu tiếp theo"}
-              </Button>
-            </div>
-          </div>
-          {appear && (
-            <div className=" text-lg text-primary">
-              <p className="text-2xl text-center pb-6">
-                Câu trả lời của bạn gồm:{" "}
-                <span className="font-bold text-secondary">{count.A}</span> A,{" "}
-                <span className="font-bold text-secondary">{count.B}</span> B,{" "}
-                <span className="font-bold text-secondary">{count.C}</span> C
-              </p>
-              <div className="w-full">
-                <Result />
-              </div>
-            </div>
+                              {item.label}
+                            </FormLabel>
+                          </FormItem>
+                        );
+                      })}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          );
+        })}
+        <div
+          className={
+            "" +
+            (stt + 1 > totalQuestion.props.children &&
+              "flex flex-col gap-8 items-center justify-center")
+          }
+        >
+          {stt + 1 > totalQuestion.props.children && (
+            <p className="text-primary text-3xl font-semibold">
+              Chúc mừng bạn vừa hoàn thành xong bài test của Malayoga nha ^^.
+            </p>
           )}
-        </form>
-      </Form>
-      {open && (
-        <Modal isOpen={open} className="h-screen w-screen ">
-          <div className="relative flex flex-col items-center justify-center bg-white sm:p-10 p-5 rounded-[16px] mx-auto sm:w-[60%] w-[80%]">
-            <CancelSquare
-              className="absolute top-6 right-6 stroke-black cursor-pointer"
-              onClick={() => {
-                setOpen(false);
-              }}
-            />
-            <p className="py-6">Bạn vui lòng chọn đáp án nha ^^</p>
-            <img
-              src={
-                "https://pos.nvncdn.com/822bfa-13829/art/artCT/20190927_cnPomDg518Ld78wOVoPvTKQ2.jpg"
+          <div className="flex gap-6">
+            <Button
+              type="button"
+              onClick={() => setSTT(stt - 1)}
+              className={
+                "bg-secondary text-white " +
+                (appear && "hidden") +
+                (stt === 0 && " hidden")
               }
-              alt=""
-              className=" w-full h-full"
-            />
+            >
+              Quay lại câu trước
+            </Button>
+            <Button
+              type="button"
+              onClick={onSubmit}
+              className={"bg-secondary text-white " + (appear && "hidden")}
+            >
+              {stt + 1 > totalQuestion.props.children
+                ? "Xem kết quá"
+                : "Qua câu tiếp theo"}
+            </Button>
           </div>
-        </Modal>
-      )}
-    </div>
+        </div>
+        {appear && (
+          <div className=" text-lg text-primary">
+            <p className="text-2xl text-center pb-6">
+              Câu trả lời của bạn gồm:{" "}
+              <span className="font-bold text-secondary">{count.A}</span> A,{" "}
+              <span className="font-bold text-secondary">{count.B}</span> B,{" "}
+              <span className="font-bold text-secondary">{count.C}</span> C
+            </p>
+            <div className="w-full">
+              <Result />
+            </div>
+          </div>
+        )}
+        {open && (
+          <Modal isOpen={open} className="h-screen w-screen ">
+            <div className="relative flex flex-col items-center justify-center bg-white sm:p-10 p-5 rounded-[16px] mx-auto sm:w-[60%] w-[80%]">
+              <CancelSquare
+                className="absolute top-6 right-6 stroke-black cursor-pointer"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              />
+              <p className="py-6">Bạn vui lòng chọn đáp án nha! ^^</p>
+              <img
+                src={
+                  "https://pos.nvncdn.com/822bfa-13829/art/artCT/20190927_cnPomDg518Ld78wOVoPvTKQ2.jpg"
+                }
+                alt=""
+                className=" w-full h-full"
+              />
+            </div>
+          </Modal>
+        )}
+      </form>
+    </Form>
   );
 }
 
