@@ -49,16 +49,6 @@ const Page = () => {
     {
       type: "radio",
       id: "5",
-      name_question: "CẤU TRÚC CƠ THỂ",
-      listquestion: [
-        { value: "A", label: "A. Mảnh mai" },
-        { value: "B", label: "B. Vừa phải" },
-        { value: "C", label: "C. Mạnh mẽ" },
-      ],
-    },
-    {
-      type: "radio",
-      id: "6",
       name_question: "THÂN NHIỆT",
       listquestion: [
         { value: "A", label: "A. Bàn tay và bàn chân lạnh " },
@@ -68,7 +58,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "7",
+      id: "6",
       name_question: "TÓC",
       listquestion: [
         { value: "A", label: "A. Khô, tốt, xoăn " },
@@ -78,7 +68,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "8",
+      id: "7",
       name_question: "TRÁN",
       listquestion: [
         { value: "A", label: "A. Hẹp" },
@@ -88,7 +78,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "9",
+      id: "8",
       name_question: "ĐÔI MẮT",
       listquestion: [
         { value: "A", label: "A. Nhỏ, căng thẳng " },
@@ -98,7 +88,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "10",
+      id: "9",
       name_question: "HÀM RĂNG",
       listquestion: [
         { value: "A", label: "A. Nhỏ bất thường, hình dáng xấu" },
@@ -108,7 +98,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "11",
+      id: "10",
       name_question: "LƯỠI",
       listquestion: [
         { value: "A", label: "A. Thô" },
@@ -118,27 +108,17 @@ const Page = () => {
     },
     {
       type: "radio",
+      id: "11",
+      name_question: "KHUÔN MẶT",
+      listquestion: [
+        { value: "A", label: "A. Nhỏ, nhăn, khô " },
+        { value: "B", label: "B. Thanh tú, hơi đỏ, sắc nét " },
+        { value: "C", label: "C. Lớn, mềm " },
+      ],
+    },
+    {
+      type: "radio",
       id: "12",
-      name_question: "KHUÔN MẶT",
-      listquestion: [
-        { value: "A", label: "A. Nhỏ, nhăn, khô " },
-        { value: "B", label: "B. Thanh tú, hơi đỏ, sắc nét " },
-        { value: "C", label: "C. Lớn, mềm " },
-      ],
-    },
-    {
-      type: "radio",
-      id: "13",
-      name_question: "KHUÔN MẶT",
-      listquestion: [
-        { value: "A", label: "A. Nhỏ, nhăn, khô " },
-        { value: "B", label: "B. Thanh tú, hơi đỏ, sắc nét " },
-        { value: "C", label: "C. Lớn, mềm " },
-      ],
-    },
-    {
-      type: "radio",
-      id: "14",
       name_question: "XƯƠNG",
       listquestion: [
         { value: "A", label: "A. Các khớp mỏng, dễ nứt" },
@@ -148,7 +128,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "15",
+      id: "13",
       name_question: "MÓNG TAY",
       listquestion: [
         { value: "A", label: "A. Giòn, thô " },
@@ -158,7 +138,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "16",
+      id: "14",
       name_question: "KHẨU VỊ",
       listquestion: [
         { value: "A", label: "A. Hay thay đổi, lo lắng " },
@@ -168,17 +148,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "17",
-      name_question: "KHUÔN MẶT",
-      listquestion: [
-        { value: "A", label: "A. Nhỏ, nhăn, khô " },
-        { value: "B", label: "B. Thanh tú, hơi đỏ, sắc nét " },
-        { value: "C", label: "C. Lớn, mềm " },
-      ],
-    },
-    {
-      type: "radio",
-      id: "18",
+      id: "15",
       name_question: "KHÁT NƯỚC",
       listquestion: [
         { value: "A", label: "A. Rất ít uống" },
@@ -190,7 +160,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "19",
+      id: "16",
       name_question: "ĐẠI TIỆN",
       listquestion: [
         { value: "A", label: "A. Phân khô, cứng " },
@@ -200,17 +170,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "20",
-      name_question: "KHUÔN MẶT",
-      listquestion: [
-        { value: "A", label: "A. Nhỏ, nhăn, khô " },
-        { value: "B", label: "B. Thanh tú, hơi đỏ, sắc nét " },
-        { value: "C", label: "C. Lớn, mềm " },
-      ],
-    },
-    {
-      type: "radio",
-      id: "21",
+      id: "17",
       name_question: "NƯỚC TIỂU",
       listquestion: [
         { value: "A", label: "A. Rất ít đi" },
@@ -220,7 +180,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "22",
+      id: "18",
       name_question: "ĐỔ MỒ HÔI",
       listquestion: [
         { value: "A", label: "A. Ít đổ mồ hôi, không có mùi" },
@@ -230,7 +190,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "23",
+      id: "19",
       name_question: "NGỦ",
       listquestion: [
         { value: "A", label: "A. Nông, hay thức giấc" },
@@ -240,7 +200,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "24",
+      id: "20",
       name_question: "TÌNH DỤC",
       listquestion: [
         {
@@ -253,7 +213,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "25",
+      id: "21",
       name_question: "TRÍ NHỚ",
       listquestion: [
         { value: "A", label: "A. Nhanh, dễ quên  " },
@@ -263,7 +223,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "26",
+      id: "22",
       name_question: "NẮM BẮT KIẾN THỨC",
       listquestion: [
         { value: "A", label: "A. Tự nhiên " },
@@ -273,7 +233,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "27",
+      id: "23",
       name_question: "TÂM TRẠNG",
       listquestion: [
         { value: "A", label: "A. Tâm trạng và ý tưởng dễ thay đổi  " },
@@ -286,7 +246,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "28",
+      id: "24",
       name_question: "THÍCH KHÍ HẬU",
       listquestion: [
         { value: "A", label: "A. Khí hậu nóng, nắng, ẩm " },
@@ -296,7 +256,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "29",
+      id: "25",
       name_question: "HOẠT ĐỘNG",
       listquestion: [
         { value: "A", label: "A. Liên tục " },
@@ -306,7 +266,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "30",
+      id: "26",
       name_question: "CẢM XÚC TÍCH CỰC",
       listquestion: [
         { value: "A", label: "A. Khả năng thích ứng " },
@@ -316,7 +276,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "31",
+      id: "27",
       name_question: "CẢM XÚC TIÊU CỰC",
       listquestion: [
         { value: "A", label: "A. Sợ hãi" },
@@ -326,7 +286,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "32",
+      id: "28",
       name_question: "PHẢN ỨNG KHI STRESS",
       listquestion: [
         { value: "A", label: "A. Sợ hãi và lo lắng khi căng thẳng " },
@@ -340,7 +300,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "33",
+      id: "29",
       name_question: "KHÁNG BỆNH",
       listquestion: [
         { value: "A", label: "A. Hệ miễn dịch kém, hay thay đổi" },
@@ -350,7 +310,7 @@ const Page = () => {
     },
     {
       type: "radio",
-      id: "34",
+      id: "30",
       name_question: "BỆNH THƯỜNG GẶP",
       listquestion: [
         {
@@ -370,7 +330,7 @@ const Page = () => {
   const totalQuestion = <CountObjectArray items={questions} />;
 
   return (
-    <div className="w-[70%] mx-auto py-28">
+    <div className="lg:w-[70%] sm:w-[85%] px-10 mx-auto py-28">
       <RadioGroupForm questions={questions} totalQuestion={totalQuestion} />
     </div>
   );

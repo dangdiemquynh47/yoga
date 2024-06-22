@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/form";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useState } from "react";
+import Modal from "./nofitication";
+import Image from "next/image";
 
 interface AnswerCount {
   [key: string]: number;
@@ -27,7 +29,7 @@ interface AnswerData {
 export function RadioGroupForm({ questions, totalQuestion }: any) {
   const [stt, setSTT] = useState(0);
   const [appear, setAppear] = useState(false);
-  console.log(stt);
+  const [open, setOpen] = useState(false);
   const objSchema: any = {};
 
   questions.map((items: any, index: number) => {
@@ -57,8 +59,12 @@ export function RadioGroupForm({ questions, totalQuestion }: any) {
     return newCount;
   };
 
-  const onSubmit = async () => {
+  const onSubmit = async (index: number) => {
     const values = form.getValues();
+    const answer = values["answer_" + (stt + 1)];
+    if (!answer) {
+      return setOpen(true);
+    }
     setSTT(stt + 1);
     const newCount = countAnswers(values);
     setCount(newCount);
@@ -66,111 +72,137 @@ export function RadioGroupForm({ questions, totalQuestion }: any) {
       setAppear(true);
     }
   };
-  
 
   return (
-    <Form {...form}>
-      <form className=" space-y-6">
-        {questions.map((items: any, index: number) => {
-          const list_question = items.listquestion;
-          const nameQuestion = items.name_question;
-          const id = items.id;
+    <div className="">
+      <Form {...form}>
+        <form className=" space-y-6">
+          {questions.map((items: any, index: number) => {
+            const list_question = items.listquestion;
+            const nameQuestion = items.name_question;
+            const id = items.id;
 
-          if (stt !== index) return null;
-          return (
-            <FormField
-              control={form.control}
-              name={("answer_" + (index + 1)) as any}
-              key={items + index}
-              render={({ field }) => (
-                <FormItem className="space-y-3">
-                  <FormLabel>
-                    Câu hỏi số <span className="text-secondary">{stt + 1}</span>
-                    /{totalQuestion}
-                    <br />
-                    <div className="bg-secondary text-white pb-4 pt-5 px-5 w-fit rounded-r-[32px] rounded-tl-[32px] my-5">
-                      {nameQuestion}
-                    </div>
-                  </FormLabel>
-                  <FormControl>
-                    <RadioGroup
-                      onValueChange={field.onChange}
-                      value={field.value}
-                      defaultValue={field.value}
-                      className="flex flex-col space-y-1"
-                    >
-                      {list_question.map((item: any, i: number) => {
-                        return (
-                          <FormItem
-                            className="flex items-center space-x-3 space-y-0 rounded-r-[32px] pb-4 pt-5 px-5 w-fit rounded-tl-[32px] border-[1px] border-secondary/40 border-solid"
-                            key={item.value + "item"}
-                          >
-                            <FormControl>
-                              <RadioGroupItem value={item.value} />
-                            </FormControl>
-                            <FormLabel
-                              htmlFor={item.value + i}
-                              className="!mt-1 !leading-5"
+            if (stt !== index) return null;
+            return (
+              <FormField
+                control={form.control}
+                name={("answer_" + (index + 1)) as any}
+                key={items + index}
+                render={({ field }) => (
+                  <FormItem className="space-y-3">
+                    <FormLabel>
+                      Câu hỏi số{" "}
+                      <span className="text-secondary">{stt + 1}</span>/
+                      {totalQuestion}
+                      <br />
+                      <div className="bg-secondary text-white pb-4 pt-5 px-5 w-fit rounded-r-[32px] rounded-tl-[32px] my-5">
+                        {nameQuestion}
+                      </div>
+                    </FormLabel>
+                    <FormControl>
+                      <RadioGroup
+                        onValueChange={field.onChange}
+                        value={field.value}
+                        defaultValue={field.value}
+                        className="flex flex-col space-y-1"
+                      >
+                        {list_question.map((item: any, i: number) => {
+                          return (
+                            <FormItem
+                              className="flex items-center space-x-3 space-y-0 rounded-r-[32px] pb-4 pt-5 px-5 w-fit rounded-tl-[32px] border-[1px] border-secondary/40 border-solid"
+                              key={item.value + "item"}
                             >
-                              {item.label}
-                            </FormLabel>
-                          </FormItem>
-                        );
-                      })}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          );
-        })}
-        <div
-          className={
-            "" +
-            (stt + 1 > totalQuestion.props.children &&
-              "flex flex-col gap-8 items-center justify-center")
-          }
-        >
-          {stt + 1 > totalQuestion.props.children && (
-            <p className="text-primary text-3xl font-semibold">
-              Chúc mừng bạn vừa hoàn thành xong bài test của Malayoga nha ^^.
-            </p>
-          )}
-          <div className="flex gap-6">
-            <Button
-              type="button"
-              onClick={() => setSTT(stt - 1)}
-              className={"bg-secondary text-white " + (appear && "hidden") + (stt === 0 && " hidden")}
-            >
-              Quay lại câu trước
-            </Button>
-            <Button
-              type="button"
-              onClick={onSubmit}
-              className={"bg-secondary text-white " + (appear && "hidden")}
-            >
-              {stt + 1 > totalQuestion.props.children
-                ? "Xem kết quá"
-                : "Qua câu tiếp theo"}
-            </Button>
-          </div>
-        </div>
-        {appear && (
-          <div className=" text-lg text-primary">
-            <p className="text-2xl text-center pb-6">
-              Câu trả lời của bạn gồm:{" "}
-              <span className="font-bold text-secondary">{count.A}</span> A,{" "}
-              <span className="font-bold text-secondary">{count.B}</span> B,{" "}
-              <span className="font-bold text-secondary">{count.C}</span> C
-            </p>
-            <div className="w-full">
-              <Result />
+                              <FormControl>
+                                <RadioGroupItem value={item.value} />
+                              </FormControl>
+                              <FormLabel
+                                htmlFor={item.value + i}
+                                className="!mt-1 !leading-5"
+                              >
+                                {item.label}
+                              </FormLabel>
+                            </FormItem>
+                          );
+                        })}
+                      </RadioGroup>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            );
+          })}
+          <div
+            className={
+              "" +
+              (stt + 1 > totalQuestion.props.children &&
+                "flex flex-col gap-8 items-center justify-center")
+            }
+          >
+            {stt + 1 > totalQuestion.props.children && (
+              <p className="text-primary text-3xl font-semibold">
+                Chúc mừng bạn vừa hoàn thành xong bài test của Malayoga nha ^^.
+              </p>
+            )}
+            <div className="flex gap-6">
+              <Button
+                type="button"
+                onClick={() => setSTT(stt - 1)}
+                className={
+                  "bg-secondary text-white " +
+                  (appear && "hidden") +
+                  (stt === 0 && " hidden")
+                }
+              >
+                Quay lại câu trước
+              </Button>
+              <Button
+                type="button"
+                onClick={onSubmit}
+                className={"bg-secondary text-white " + (appear && "hidden")}
+              >
+                {stt + 1 > totalQuestion.props.children
+                  ? "Xem kết quá"
+                  : "Qua câu tiếp theo"}
+              </Button>
             </div>
           </div>
-        )}
-      </form>
-    </Form>
+          {appear && (
+            <div className=" text-lg text-primary">
+              <p className="text-2xl text-center pb-6">
+                Câu trả lời của bạn gồm:{" "}
+                <span className="font-bold text-secondary">{count.A}</span> A,{" "}
+                <span className="font-bold text-secondary">{count.B}</span> B,{" "}
+                <span className="font-bold text-secondary">{count.C}</span> C
+              </p>
+              <div className="w-full">
+                <Result />
+              </div>
+            </div>
+          )}
+        </form>
+      </Form>
+      {open && (
+        <Modal isOpen={open} className="h-screen w-screen ">
+          <div className="relative flex flex-col items-center justify-center bg-white sm:p-10 p-5 rounded-[16px] mx-auto sm:w-[60%] w-[80%]">
+            <CancelSquare
+              className="absolute top-6 right-6 stroke-black cursor-pointer"
+              onClick={() => {
+                setOpen(false);
+              }}
+            />
+            <p className="py-6">Bạn vui lòng chọn đáp án nha ^^</p>
+            <img
+              src={
+                "https://pos.nvncdn.com/822bfa-13829/art/artCT/20190927_cnPomDg518Ld78wOVoPvTKQ2.jpg"
+              }
+              alt=""
+              className=" w-full h-full"
+            />
+          </div>
+        </Modal>
+      )}
+    </div>
   );
 }
 
@@ -210,3 +242,29 @@ const Result = () => {
     </>
   );
 };
+
+export function CancelSquare(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M15 9l-6 6m6 0L9 9"
+        strokeOpacity={0.3}
+        strokeWidth={1.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109C18.717 21.5 16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391C2.5 18.717 2.5 16.479 2.5 12z"
+        strokeOpacity={0.3}
+        strokeWidth={1.5}
+      />
+    </svg>
+  );
+}
