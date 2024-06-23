@@ -98,12 +98,8 @@ const MenuMobile = ({ header, setHeader }: any) => {
             </div>
             {menu.map((item: any) => {
               return (
-                <div className="flex ">
-                  <Link
-                    href={"/" + item.url}
-                    key={item.title}
-                    onClick={openMenuMobile}
-                  >
+                <div className="flex " key={item.title}>
+                  <Link href={"/" + item.url} onClick={openMenuMobile}>
                     <div
                       className={
                         "cursor-pointer lg:text-[20px] duration-300 text-title italic hover:text-primary text-bold" +
