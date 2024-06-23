@@ -99,8 +99,8 @@ const Classes = () => {
         {classes.map((item: any, index: number) => {
           return (
             <div className="flex flex-col items-center justify-center" key={item + index}>
-              <div className="w-[59%] min-h-[156px] flex  items-center justify-center">{item.icon}</div>
-              <p className="md:mt-6 mt-3 min-h-[64px]">{item.name}</p>
+              <div className="w-full min-h-[156px]  flex  items-center justify-center">{item.icon}</div>
+              <p className="md:mt-6 mt-3 lg:min-h-[64px] min-h-[96px]">{item.name}</p>
             </div>
           );
         })}
