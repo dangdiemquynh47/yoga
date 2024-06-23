@@ -115,6 +115,9 @@ const MenuMobile = ({ header, setHeader }: any) => {
                 </div>
               );
             })}
+            <Link href={"/trac-nghiem-dosha"} className="" onClick={openMenuMobile}>
+                <p className="text-title italic hover:text-primary text-bold text-xl font-bold">Dosha Quiz</p>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
@@ -128,6 +131,7 @@ const MenuMobile = ({ header, setHeader }: any) => {
 
 const UseBodyScrollBlock = () => {
   const [isLocked, setIsLocked] = useState(false);
+  
   useEffect(() => {
     const bodyStyle = document?.body?.style;
     bodyStyle.overflowY = isLocked ? "hidden" : "auto";

@@ -72,9 +72,6 @@ export function RadioGroupForm({ questions, totalQuestion }: any) {
       setAppear(true);
     }
   };
-  console.log(totalQuestion.props.children);
-
-  console.log(stt);
 
   return (
     <Form {...form}>
