@@ -13,13 +13,13 @@ const Banner = () => {
   ];
   return (
     <div className="max-w-screen overflow-hidden">
-      <div className="md:w-[150%] w-[220%] bg-be/20 md:pl-20 pb-40">
+      <div className="bg-be/20 xl:pl-20 sm:pl-10 pb-40">
         <Swiper
           modules={[Autoplay]}
           breakpoints={{
             0: {
               spaceBetween: 50,
-              slidesPerView: 2,
+              slidesPerView: 1,
               autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
@@ -27,7 +27,7 @@ const Banner = () => {
             },
 
             768: {
-              slidesPerView: 2,
+              slidesPerView: 1.4,
               spaceBetween: 50,
               autoplay: {
                 delay: 3000,
@@ -39,7 +39,7 @@ const Banner = () => {
           // onSwiper={(swiper) => console.log(swiper)}
           loop={true}
           spaceBetween={50}
-          slidesPerView={2}
+          slidesPerView={1.2}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -51,7 +51,7 @@ const Banner = () => {
                 <img
                   src={"/images/malayoga/" + item.img}
                   alt=""
-                  className="lg:h-[80vh] md:h-[50vh] md:w-full object-cover brightness-[0.95]"
+                  className="xl:h-[80vh] lg:h-[60vh] md:h-[50vh] md:w-full object-cover brightness-[0.95]"
                 />
                 <div className="flex flex-col absolute md:text-7xl text-4xl text-white md:bottom-10 md:left-10 bottom-6 left-6 ">
                   <p className="text-title pb-10">{item.text}</p>

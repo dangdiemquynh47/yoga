@@ -79,7 +79,7 @@ const Schedules = async () => {
         <br className="md:block hidden" /> the classes
         <br className="block md:hidden" /> we have available
       </p>
-      <div className="mt-10 items-center justify-center md:flex hidden px-10 md:px-20">
+      <div className="mt-10 items-center justify-center lg:flex hidden px-10 md:px-20">
         <table className="w-full">
           <thead>
             <tr className="border-[1px] border-secondary border-dashed">
@@ -155,7 +155,7 @@ const Schedules = async () => {
         </table>
       </div>
 
-      <div className="md:hidden block px-4 py-10">
+      <div className="lg:hidden block px-4 py-10">
         {dayword.map((item: any, index) => {
           const day = days[index];
        

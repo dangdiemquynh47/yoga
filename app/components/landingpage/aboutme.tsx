@@ -21,7 +21,7 @@ const AboutMe = () => {
         </p>
       </div>
       <div className="">
-        <p className="text-table w-[40%] text-md min-h-[300px]">
+        <p className="text-table lg:w-[40%] w-full text-md lg:min-h-[300px] lg:pb-0 pb-10">
           If you`re here and read a little about me, I believe the universe is
           connecting us. Surely you are also a Yogi/Yogini or the universe has
           sent a signal for you to touch your finger to touch Yoga. Hope my
@@ -45,7 +45,7 @@ const AboutMe = () => {
       <img
         src="/images/malayoga/IMG_0598-crop.jpg"
         alt=""
-        className="relative lg:translate-y-0 translate-y-[25%] lg:absolute lg:top-[110px] 2xl:right-60 lg:right-20 rounded-sm lg:w-[470px] h-[651px] object-cover mx:auto w-full"
+        className="relative lg:translate-y-0 lg:translate-y-[25%] lg:absolute lg:top-[110px] 2xl:right-60 lg:right-20 rounded-sm lg:w-[470px] h-[651px] object-cover mx:auto w-full"
       />
     </div>
   );
