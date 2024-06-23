@@ -28,7 +28,7 @@ const Header = () => {
       className="mx-auto w-full md:h-[80px] h-fit lg:px-[82px] md:px-8 sticky top-0 z-50 shadow-md px-4 bg-[#fedfcd] text-black flex flex-row items-center sm:justify-between justify-center"
     >
       <div className="flex-none">
-        <div className="md:flex hidden gap-4 items-center justify-center">
+        <div className="xl:flex hidden gap-4 items-center justify-center">
           <a
             target="_blank"
             href="https://www.facebook.com/mala.yoga.studio"
@@ -52,7 +52,7 @@ const Header = () => {
           </a>
         </div>
       </div>
-      <div className="sm:grid hidden md:grid-cols-7 lg:px-28 md:px-2 grow hidden items-center justify-center">
+      <div className="sm:grid hidden md:grid-cols-7 xl:px-28 md:px-2 grow hidden items-center justify-center">
         {menu.map((item: any) => {
           return (
             <Link href={item.url} key={item.title}>

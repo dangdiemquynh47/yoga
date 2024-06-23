@@ -330,7 +330,7 @@ const Page = () => {
   const totalQuestion = <CountObjectArray items={questions} />;
 
   return (
-    <div className="lg:w-[70%] sm:w-[85%] px-10 mx-auto py-28">
+    <div className="lg:w-[70%] sm:w-[85%] px-5 mx-auto py-28">
       <RadioGroupForm questions={questions} totalQuestion={totalQuestion} />
     </div>
   );

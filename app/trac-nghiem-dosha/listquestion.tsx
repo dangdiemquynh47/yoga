@@ -62,7 +62,7 @@ export function RadioGroupForm({ questions, totalQuestion }: any) {
   const onSubmit = async () => {
     const values = form.getValues();
     const answer = values["answer_" + (stt + 1)];
-    if (!answer) {
+    if (!answer && stt  !== totalQuestion.props.children) {
       return setOpen(true);
     }
     setSTT(stt + 1);
@@ -72,6 +72,9 @@ export function RadioGroupForm({ questions, totalQuestion }: any) {
       setAppear(true);
     }
   };
+  console.log(totalQuestion.props.children);
+
+  console.log(stt);
 
   return (
     <Form {...form}>
