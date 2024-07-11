@@ -20,7 +20,7 @@ const Blog = async () => {
         </span>{" "}
         and learn <br className="md:hidden block" />
         more <br className="hidden md:block" /> about our{" "}
-        <br className="md:hidden block" /> community
+        <br className="md:hidden block" />community
       </p>
       <div className="grid sm:grid-cols-3 grid-cols-1 lg:gap-x-16 md:gap-x-6 lg:gap-x-20 pt-10">
         {list.map((item: any, index: number) => {
