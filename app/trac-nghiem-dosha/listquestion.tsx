@@ -62,7 +62,7 @@ export function RadioGroupForm({ questions, totalQuestion }: any) {
   const onSubmit = async () => {
     const values = form.getValues();
     const answer = values["answer_" + (stt + 1)];
-    if (!answer && stt  !== totalQuestion.props.children) {
+    if (!answer && stt !== totalQuestion.props.children) {
       return setOpen(true);
     }
     setSTT(stt + 1);
@@ -207,7 +207,7 @@ const Result = () => {
   const result = [
     {
       title: "A. Vata",
-      des: "Người có tạng Kapha trội là những người có thân hình to khỏe và bản chất yêu thích vận động thường xuyên để kiểm soát cân nặng của mình vì Kapha dễ bị tăng cân. Tạng Kapha trội chịu ảnh hưởng nhiều từ yếu tố đất và nước, nên họ có tính cách ổn định, từ bi và trung thành. Họ chuộng làm những việc có tính khoa học, qui trình và duy trì công việc và cuộc sống cá nhân với những cách thức quen thuộc. Khi trượt ra khỏi điểm cân bằng, họ dễ nản chí, bướng bỉnh và dễ bằng lòng với cái cũ cho dù lúc đó họ cần thay đổi. Sự trao đổi chất trong cơ thể của người Kapha thường chậm. Họ cũng không thèm ăn như người Vata hoặc Pitta. Chính vì bản chất này, sẽ tốt hơn cho người Kapha nếu họ thay đổi môi trường sống, gặp gỡ nhiều bạn bè mới, và thỉnh thoảng nhịn ăn.",
+      des: " Người trội Vata thường gầy và cao lêu nghêu. Họ là những người rất năng động về thể chất lẫn tinh thần. Họ thích những trải nghiệm sáng tạo, gặp gỡ bạn bè mới và đi đến những nơi chốn mới. Khi ở trạng thái cân bằng, người trội Vata rất uyển chuyển, có trí tưởng tượng sinh động, luôn nghĩ về những ý tưởng độc đáo. Nhưng khi mất cân bằng, người Vata rất dễ lo lắng, khó hoàn thành công việc. Cơ thể họ thường bị lạnh và khô, nên họ rất thích thời tiết ấm và ẩm. Người Vata thường bị chứng tay chân lạnh, táo bón, da khô, và khớp kêu răng rắc. Yếu tố khí trội ở người Vata, dẫn đến năng lượng, tâm trạng, cảm giác thèm ăn của người Vata thay đổi thất thường. Vì vậy người Vata thường ăn và ngủ không điều độ, hay lạm dụng thức ăn để kiểm soát bản thân cũng như uống những thức uống có chất kích thích như café, nước ngọt để duy trì hoạt động thể chất và tinh thần cao độ của mình. Người Vata trội lại còn nhạy cảm thường gặp chứng mất ngủ và kháng thể kém.",
     },
     {
       title: "B. Pitta",
@@ -215,7 +215,7 @@ const Result = () => {
     },
     {
       title: "C. Kapha",
-      des: " Người trội Vata thường gầy và cao lêu nghêu. Họ là những người rất năng động về thể chất lẫn tinh thần. Họ thích những trải nghiệm sáng tạo, gặp gỡ bạn bè mới và đi đến những nơi chốn mới. Khi ở trạng thái cân bằng, người trội Vata rất uyển chuyển, có trí tưởng tượng sinh động, luôn nghĩ về những ý tưởng độc đáo. Nhưng khi mất cân bằng, người Vata rất dễ lo lắng, khó hoàn thành công việc. Cơ thể họ thường bị lạnh và khô, nên họ rất thích thời tiết ấm và ẩm. Người Vata thường bị chứng tay chân lạnh, táo bón, da khô, và khớp kêu răng rắc. Yếu tố khí trội ở người Vata, dẫn đến năng lượng, tâm trạng, cảm giác thèm ăn của người Vata thay đổi thất thường. Vì vậy người Vata thường ăn và ngủ không điều độ, hay lạm dụng thức ăn để kiểm soát bản thân cũng như uống những thức uống có chất kích thích như café, nước ngọt để duy trì hoạt động thể chất và tinh thần cao độ của mình. Người Vata trội lại còn nhạy cảm thường gặp chứng mất ngủ và kháng thể kém.",
+      des: "Người có tạng Kapha trội là những người có thân hình to khỏe và bản chất yêu thích vận động thường xuyên để kiểm soát cân nặng của mình vì Kapha dễ bị tăng cân. Tạng Kapha trội chịu ảnh hưởng nhiều từ yếu tố đất và nước, nên họ có tính cách ổn định, từ bi và trung thành. Họ chuộng làm những việc có tính khoa học, qui trình và duy trì công việc và cuộc sống cá nhân với những cách thức quen thuộc. Khi trượt ra khỏi điểm cân bằng, họ dễ nản chí, bướng bỉnh và dễ bằng lòng với cái cũ cho dù lúc đó họ cần thay đổi. Sự trao đổi chất trong cơ thể của người Kapha thường chậm. Họ cũng không thèm ăn như người Vata hoặc Pitta. Chính vì bản chất này, sẽ tốt hơn cho người Kapha nếu họ thay đổi môi trường sống, gặp gỡ nhiều bạn bè mới, và thỉnh thoảng nhịn ăn.",
     },
     {
       title: "Tạng trội hai dosha.",
