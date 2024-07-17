@@ -5,7 +5,7 @@ import Star from "@/app/blogs/star";
 import Link from "next/link";
 
 const Blog = async () => {
-  const blog = await axiosInstance.get("/items/post?field=*");
+  const blog = await axiosInstance.get("/items/post?field=*&sort=-date_created");
   const list = blog.data || [];
 
   return (
