@@ -39,6 +39,8 @@ export default async function Home({ params }: any) {
     </div>
   );
 }
+export const revalidate = 3600;
+
 
 export async function generateMetadata({ params }: any) {
   const title = "Blog - slug";

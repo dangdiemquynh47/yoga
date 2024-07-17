@@ -34,7 +34,7 @@ const MenuBrowser = ({ header, setHeader }: any) => {
     <div className="w-full sm:grid hidden md:grid-cols-7 xl:px-28 md:px-2 grow hidden items-center justify-center">
       {menu.map((item: any) => {
         return (
-          <Link href={item.url} key={item.title}>
+          <Link href={"/" + item.url} key={item.title}>
             <div
               className={
                 "cursor-pointer lg:text-[20px] duration-300 text-title italic hover:text-primary text-bold" +
@@ -115,8 +115,14 @@ const MenuMobile = ({ header, setHeader }: any) => {
                 </div>
               );
             })}
-            <Link href={"/trac-nghiem-dosha"} className="" onClick={openMenuMobile}>
-                <p className="text-title italic hover:text-primary text-bold text-xl font-bold">Dosha Quiz</p>
+            <Link
+              href={"/trac-nghiem-dosha"}
+              className=""
+              onClick={openMenuMobile}
+            >
+              <p className="text-title italic hover:text-primary text-bold text-xl font-bold">
+                Dosha Quiz
+              </p>
             </Link>
           </motion.div>
         )}
@@ -131,7 +137,7 @@ const MenuMobile = ({ header, setHeader }: any) => {
 
 const UseBodyScrollBlock = () => {
   const [isLocked, setIsLocked] = useState(false);
-  
+
   useEffect(() => {
     const bodyStyle = document?.body?.style;
     bodyStyle.overflowY = isLocked ? "hidden" : "auto";
