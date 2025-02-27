@@ -12,7 +12,7 @@ export default async function Home({ params }: any) {
     "/items/post?fields=*,images.*.*&filter[slug][_eq]=" + slug
   );
   const blog = post.data[0];
-  
+
   return (
     <div className="pt-6">
       <div className="aspect-[3/1] xl:h-full md:h-[60vh] h-[50vh] w-full overflow-hidden relative ">
@@ -30,17 +30,16 @@ export default async function Home({ params }: any) {
         <div className="pt-14 md:px-40">
           <p className="text-title text-4xl font-bold">{blog.title}</p>
           <div className="h-[3px] w-[300px] bg-primary mt-4"></div>
-          <p
+          <div
             className="pt-10 text-table"
             dangerouslySetInnerHTML={{ __html: blog.content }}
-          ></p>
+          ></div>
         </div>
       </div>
     </div>
   );
 }
 export const revalidate = 3600;
-
 
 export async function generateMetadata({ params }: any) {
   const title = "Blog - slug";

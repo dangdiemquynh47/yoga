@@ -105,6 +105,15 @@ body {
   font-family: "Cormorant Garamond", serif !important;
 }
 
+ol {
+  list-style-type: decimal; /* Kiểu số mặc định */
+  padding-left: 20px; /* Khoảng cách bên trái */
+}
+
+ol li {
+  margin: 5px 0; /* Khoảng cách giữa các item */
+}
+
 .text-content {
   font-family: "Source Code Pro", monospace !important;
 }
@@ -130,7 +139,6 @@ body {
   border-style: solid;
   border-color: #ff782b;
 }
-
 
 .bg-button {
   background-color: #96af52;
@@ -185,5 +193,11 @@ body {
 }
 
 .bg-overlay {
-  background: linear-gradient(180deg, rgb(24 26 31/70%) 2.73%, rgba(41, 42, 49, 0.2) 31.66%, rgb(24 26 31 / 30%) 54.78%, #181a1f 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(24 26 31/70%) 2.73%,
+    rgba(41, 42, 49, 0.2) 31.66%,
+    rgb(24 26 31 / 30%) 54.78%,
+    #181a1f 100%
+  );
 }
