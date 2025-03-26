@@ -8,7 +8,7 @@ const Header = () => {
       id="home"
       className="mx-auto w-full md:h-[80px] h-[60px] lg:px-[82px] md:px-8 sticky top-0 z-50 shadow-md px-4 bg-[#fedfcd] text-black flex flex-row items-center justify-between"
     >
-      <Link href={"/"} className="ml-0 md:hidden block">
+      <Link href={"/"} className="ml-0 md:hidden block"> 
         <div className="">
           <img
             src="/images/logo-remove-bg.png"
