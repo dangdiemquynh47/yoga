@@ -18,32 +18,30 @@ const Header = () => {
         </div>
       </Link>
 
-      <div className="xl:hidden sm:block hidden flex-none w-[60px]">
-      
-      </div>
+      <div className="xl:hidden sm:block hidden flex-none w-[60px]"></div>
       <div className="">
         <div className="xl:flex hidden gap-4 items-center justify-center">
-          <a
+          <Link
             target="_blank"
             href="https://www.facebook.com/mala.yoga.studio"
             rel="noopener noreferrer"
           >
             <FacebookIcon className="md:hover:fill-orange-500 duration-300 cursor-pointer -mx-2" />
-          </a>
-          <a
+          </Link>
+          <Link
             target="_blank"
             href="https://www.instagram.com/mala.yoga.studio?igsh=MTJvcWZienY0emRkOQ=="
             rel="noopener noreferrer"
           >
             <InstagramIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
-          </a>
-          <a
+          </Link>
+          <Link
             target="_blank"
-            href="https://www.facebook.com/mala.yoga.studio"
+            href="https://www.youtube.com/@mala.yoga.studio"
             rel="noopener noreferrer"
           >
             <YoutubeIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
-          </a>
+          </Link>
         </div>
       </div>
       <Menu />
@@ -60,6 +58,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-

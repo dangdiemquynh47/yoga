@@ -37,12 +37,12 @@ const Footer = () => {
         </div>
         <div className="flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center">
           <div className="md:order-first order-1 flex flex-row md:flex-col text-center items-center md:gap-4 gap-10 text-[12px]">
-            <Link href={"/" +"#home"}>
+            <Link href={"/" + "#home"}>
               <p className="hover:text-orange-500 cursor-pointer duration-300">
                 HOME
               </p>
             </Link>
-            <Link href={"/" +"#classes"}>
+            <Link href={"/" + "#classes"}>
               <p
                 id=" "
                 className="hover:text-orange-500 cursor-pointer duration-300"
@@ -50,7 +50,7 @@ const Footer = () => {
                 CLASSES
               </p>
             </Link>
-            <Link href={"/" +"#aboutme"}>
+            <Link href={"/" + "#aboutme"}>
               <p
                 id="aboutme"
                 className="hover:text-orange-500 cursor-pointer duration-300"
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
           <div className="items-center flex flex-col gap-8 ">
             <p className="md:text-3xl text-2xl text-title">
-              Subsrcibe to our newsletter
+              Subscribe to our newsletter
             </p>
             <div className="flex md:flex-row flex-col">
               <input
@@ -76,27 +76,27 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex gap-6 items-center">
-              <a
+              <Link
                 target="_blank"
                 href="https://www.facebook.com/mala.yoga.studio"
                 rel="noopener noreferrer"
               >
                 <FacebookIcon className="md:hover:fill-orange-500 duration-300 cursor-pointer -mx-2" />
-              </a>
-              <a
+              </Link>
+              <Link
                 target="_blank"
                 href="https://www.instagram.com/mala.yoga.studio?igsh=MTJvcWZienY0emRkOQ=="
                 rel="noopener noreferrer"
               >
                 <InstagramIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
-              </a>
-              <a
+              </Link>
+              <Link
                 target="_blank"
-                href="https://www.facebook.com/mala.yoga.studio"
+                href="https://www.youtube.com/@mala.yoga.studio"
                 rel="noopener noreferrer"
               >
                 <YoutubeIcon className="md:hover:stroke-orange-500 duration-300 cursor-pointer" />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="text-center items-center flex flex-row md:flex-col md:gap-4 gap-10 text-[12px]">
@@ -105,12 +105,12 @@ const Footer = () => {
                 Schedules
               </p>
             </Link>
-            <Link href={"/" +"#blogs"}>
+            <Link href={"/" + "#blogs"}>
               <p className="hover:text-orange-500 cursor-pointer uppercase duration-300">
                 Blogs
               </p>
             </Link>
-            <Link href={"/" +"#contact"}>
+            <Link href={"/" + "#contact"}>
               <p className="hover:text-orange-500 cursor-pointer uppercase duration-300">
                 Contact Us
               </p>
