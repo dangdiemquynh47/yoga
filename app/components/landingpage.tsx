@@ -6,6 +6,7 @@ import Schedules from "./landingpage/schedules";
 import AboutMe from "./landingpage/aboutme";
 import Classes from "./landingpage/classes";
 import Banner from "./landingpage/banner";
+import Category from "./landingpage/category";
 
 const LandingPage = () => {
   return (
@@ -30,6 +31,7 @@ const LandingPage = () => {
       </div> */}
       <div className="mt-20 mb-80">
         <Blog />
+        {/* <Category /> */}
       </div>
       {/* <div className="-translate-y-[10%] pb-40">
         <Feedback />

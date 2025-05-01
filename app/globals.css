@@ -192,6 +192,13 @@ ol li {
   -webkit-box-orient: vertical;
 }
 
+.truncate-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
 .bg-overlay {
   background: linear-gradient(
     180deg,

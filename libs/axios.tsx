@@ -21,3 +21,15 @@ export const axiosClient = axios.create({
   },
 });
 
+export const fetcher = (url: any, params: any) => {
+  if (url) {
+    return axiosInstance.get(url, { params });
+  }
+};
+
+export const configSWR = {
+  revalidateIfStale: false,
+  revalidateOnFocus: false,
+  fetcher: fetcher,
+  errorRetryCount: 3,
+};
