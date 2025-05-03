@@ -30,8 +30,8 @@ const LandingPage = () => {
         <Experts />
       </div> */}
       <div className="mt-20 mb-80">
-        <Blog />
-        {/* <Category /> */}
+        {/* <Blog /> */}
+        <Category />
       </div>
       {/* <div className="-translate-y-[10%] pb-40">
         <Feedback />

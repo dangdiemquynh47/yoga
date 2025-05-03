@@ -12,13 +12,13 @@ const Page = async () => {
       <div className="bg-white min-h-screen pb-20">
         <Breadcrumb list={list_categories} />
         <div>
-          <div className="flex xl:flex-row flex-col gap-20 justify-center px-24 py-20 relative">
-            <div className="w-full xl:w-3/12">
+          <div className="flex sm:flex-row flex-col gap-20 justify-center xl:px-24 px-4 xl:py-20 py-10 relative">
+            <div className="w-full sm:w-3/12">
               <div className=" sticky top-0">
                 <MenuLeftCategorires categories={list_categories} />
               </div>
             </div>
-            <div className="w-full xl:w-9/12">
+            <div className="w-full sm:w-9/12">
               <ContentRight />
             </div>
           </div>

@@ -12,7 +12,7 @@ const ContentRight = () => {
   const cate = listData.filter((item: any) => item.category.slug === slug);
 
   return (
-    <div className="grid grid-cols-3 gap-x-10 gap-y-20">
+    <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-10 sm:gap-y-20 gap-y-10">
       {cate.map((item: any, index: number) => {
         const { slug, id } = item;
         const position = (index + 1) % 3;
@@ -35,7 +35,7 @@ const CardPost = ({ item, active }: any) => {
   return (
     <div className={"w-full h-full "}>
       <div className="flex flex-col group">
-        <div className="aspect-[7/9] overflow-hidden h-[400px] relative">
+        <div className="sm:aspect-[7/9] aspect-[3/1] overflow-hidden sm:h-[400px] h-[300px] relative">
           <Image
             src={renderImageById(thumbnail)}
             alt={title}
